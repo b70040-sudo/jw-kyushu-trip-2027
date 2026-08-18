@@ -1,0 +1,21 @@
+這是「結構重建版」，不是舊版補丁。
+
+主要改動：
+1. index.html 不再包含大量 JavaScript 原始碼
+2. 全部 JavaScript 移到 app.js
+3. index.html 只引用 <script src="./app.js" defer></script>
+4. 因此不會再出現 function / speechSynthesis / document... 等程式碼顯示在畫面
+5. Service Worker 使用全新 cache key
+6. Vercel 對 index.html / app.js / sw.js 強制 no-cache
+
+Vercel 更新方式：
+- ZIP 解壓後，整包所有檔案一起上傳 GitHub main
+- 必須包含新的 app.js
+- Commit 完成後，確認 Vercel 出現「新的 Deployment」
+- 不要只看舊的 3021d07 Deployment
+- 新 Deployment Ready 後再按 Visit
+
+iPhone：
+- 完全關閉 Safari 舊分頁
+- 若已加入主畫面，先不要用舊 PWA 圖示測試
+- 先用 Safari 開正式網址確認新版

@@ -502,13 +502,12 @@ body.offline .offline-only-note{display:block}
   .tabs button span{font-size:19px !important}
 }
 
-</style></head><body>
+</style></head><body><!-- build: vercel-clean-fixed-20260818 -->
 <!-- APP RULE STRICT:
 想買、想吃、旅行備忘唯一完整內容固定於 #wishlist 收藏頁。
 今日、行程、完成、清單、更多、日文頁皆不得重複產生上述欄位或快捷副本。
 底部導覽固定六等分：今日、行程、完成、清單、更多、收藏。
 -->
-
 <div class="app"><div class="label">JW · KYUSHU 2027</div><h1>九州旅行🇯🇵</h1><div class="sub">2027/3/25～3/31｜7天6夜｜博多連住</div>
 <section class="page active" id="today">
 <div class="card weather-home">
@@ -550,10 +549,749 @@ body.offline .offline-only-note{display:block}
 <div class="label">一鍵工具</div>
 <div class="btns">
 
+<a class="btn alt online-only" href="https://www.google.com/maps/search/?api=1&amp;query=Hakata+Station">🚉 博多站</a>
+<button class="btn alt" onclick="show('japanese')">🇯🇵 日文求助</button>
+</div>
+</div>
+</section>
+<section class="page" id="plan">
+<div class="title">每日行程＋位置圖 🗓️🗺️</div>
+<div class="small">點開每天即可查看完整行程、照片與地理位置動線圖。</div>
+<div class="route-image-card">
+<b>🗺️ 全行程路線指南</b>
+<div class="caption">全行程總覽固定展開；每日細節則可收合。</div>
+<img alt="九州全行程總覽" onclick="openRouteImage(this.src)" src="./all_days_route_overview.png"/>
+</div>
+<details class="day-accordion" data-day="1">
+<summary class="day-accordion-summary">
+<div class="day-accordion-left">
+<div class="day-accordion-top">
+<span class="day-badge">DAY 1</span>
+<span class="day-date">3/25（四）</span>
+</div>
+<div class="day-accordion-title">抵達福岡</div>
+</div>
+<span class="day-chevron">⌄</span>
+</summary>
+<div class="day-accordion-body">
+<div class="card">
+<div class="big">🌙 晚上抵達 → 博多入住 → 晚餐 → 休息</div>
+<div class="step"><div class="num">1</div><div><b>抵達福岡機場</b><div class="small">完成入境與行李領取後前往博多。</div></div></div>
+<div class="step"><div class="num">2</div><div><b>入住 Hotel Prezio 博多站前</b><div class="small">先放行李、簡單整理。</div></div></div>
+<div class="step"><div class="num">3</div><div><b>博多站周邊晚餐</b><div class="small">以方便、快速、不繞路為主。</div></div></div>
+<div class="step"><div class="num">4</div><div><b>回飯店休息</b><div class="small">保留體力給 Day 2 豪斯登堡。</div></div></div>
+</div>
+<div class="daily-photo-card">
+<img alt="抵達福岡" onclick="openRouteImage(this.src)" src="./day1_photo_16x9.jpg"/>
+<div class="photo-caption">抵達福岡｜點圖片可放大</div>
+</div>
+<div class="route-image-card">
+<b>🗺️ Day 1 地理位置／動線圖</b>
+<div class="caption">依目前行程整理的示意動線；正式 JR／巴士班次之後再更新。</div>
+<img alt="Day 1 路線圖" onclick="openRouteImage(this.src)" src="./day1_route_16x9.png"/>
+</div>
+</div>
+</details>
+<details class="day-accordion" data-day="2">
+<summary class="day-accordion-summary">
+<div class="day-accordion-left">
+<div class="day-accordion-top">
+<span class="day-badge">DAY 2</span>
+<span class="day-date">3/26（五）</span>
+</div>
+<div class="day-accordion-title">豪斯登堡</div>
+</div>
+<span class="day-chevron">⌄</span>
+</summary>
+<div class="day-accordion-body">
+<div class="card">
+<div class="big">🎡 米飛小鎮 → 園區 → 晚上燈光秀／煙火 → JR回博多</div>
+<div class="step"><div class="num">1</div><div><b>博多站 → 豪斯登堡</b><div class="small">提早抵達車站，確認特急與月台。</div></div></div>
+<div class="step"><div class="num">2</div><div><b>米飛小鎮</b><div class="small">入園後優先安排米飛主題區。</div></div></div>
+<div class="step"><div class="num">3</div><div><b>園區自由活動</b><div class="small">遊樂設施、拍照、晚餐。</div></div></div>
+<div class="step"><div class="num">4</div><div><b>燈光秀／煙火</b><div class="small">結束後盡早往豪斯登堡站移動。</div></div></div>
+<div class="step"><div class="num">5</div><div><b>JR 回博多</b><div class="small">正式車次公布後再補最終回程班次。</div></div></div>
+</div>
+<div class="daily-photo-card">
+<img alt="豪斯登堡" onclick="openRouteImage(this.src)" src="./day2_photo_16x9.jpg"/>
+<div class="photo-caption">豪斯登堡｜點圖片可放大</div>
+</div>
+<div class="route-image-card">
+<b>🗺️ Day 2 地理位置／動線圖</b>
+<div class="caption">依目前行程整理的示意動線；正式 JR／巴士班次之後再更新。</div>
+<img alt="Day 2 路線圖" onclick="openRouteImage(this.src)" src="./day2_route_16x9.png"/>
+</div>
+</div>
+</details>
+<details class="day-accordion" data-day="3">
+<summary class="day-accordion-summary">
+<div class="day-accordion-left">
+<div class="day-accordion-top">
+<span class="day-badge">DAY 3</span>
+<span class="day-date">3/27（六）</span>
+</div>
+<div class="day-accordion-title">福岡賞櫻＋天神</div>
+</div>
+<span class="day-chevron">⌄</span>
+</summary>
+<div class="day-accordion-body">
+<div class="card">
+<div class="big">🌸 舞鶴公園 → 午餐 → 回飯店休息 → 天神商圈 → 晚餐</div>
+<div class="step"><div class="num">1</div><div><b>舞鶴公園／福岡城跡賞櫻</b><div class="small">上午以散步與拍照為主。</div></div></div>
+<div class="step"><div class="num">2</div><div><b>午餐</b><div class="small">公園周邊或往博多／天神方向用餐。</div></div></div>
+<div class="step"><div class="num">3</div><div><b>回飯店休息</b><div class="small">避開下午疲勞，整理照片與補充體力。</div></div></div>
+<div class="step"><div class="num">4</div><div><b>天神商圈</b><div class="small">百貨、地下街、商場自由逛。</div></div></div>
+<div class="step"><div class="num">5</div><div><b>天神晚餐</b><div class="small">晚餐後回博多休息。</div></div></div>
+</div>
+<div class="daily-photo-card">
+<img alt="福岡賞櫻＋天神" onclick="openRouteImage(this.src)" src="./day3_photo_16x9.jpg"/>
+<div class="photo-caption">福岡賞櫻＋天神｜點圖片可放大</div>
+</div>
+<div class="route-image-card">
+<b>🗺️ Day 3 地理位置／動線圖</b>
+<div class="caption">依目前行程整理的示意動線；正式 JR／巴士班次之後再更新。</div>
+<img alt="Day 3 路線圖" onclick="openRouteImage(this.src)" src="./day3_route_16x9.png"/>
+</div>
+</div>
+</details>
+<details class="day-accordion" data-day="4">
+<summary class="day-accordion-summary">
+<div class="day-accordion-left">
+<div class="day-accordion-top">
+<span class="day-badge">DAY 4</span>
+<span class="day-date">3/28（日）</span>
+</div>
+<div class="day-accordion-title">由布院</div>
+</div>
+<span class="day-chevron">⌄</span>
+</summary>
+<div class="day-accordion-body">
+<div class="card">
+<div class="big">♨️ 由布院一日遊 → 傍晚回博多</div>
+<div class="step"><div class="num">1</div><div><b>博多 → 由布院</b><div class="small">建議事先劃位，提早到月台。</div></div></div>
+<div class="step"><div class="num">2</div><div><b>湯之坪街道</b><div class="small">散步、甜點、伴手禮。</div></div></div>
+<div class="step"><div class="num">3</div><div><b>金鱗湖</b><div class="small">主要拍照與散步景點。</div></div></div>
+<div class="step"><div class="num">4</div><div><b>傍晚回博多</b><div class="small">回程車次正式公布後更新。</div></div></div>
+</div>
+<div class="daily-photo-card">
+<img alt="由布院" onclick="openRouteImage(this.src)" src="./day4_photo_16x9.jpg"/>
+<div class="photo-caption">由布院｜點圖片可放大</div>
+</div>
+<div class="route-image-card">
+<b>🗺️ Day 4 地理位置／動線圖</b>
+<div class="caption">依目前行程整理的示意動線；正式 JR／巴士班次之後再更新。</div>
+<img alt="Day 4 路線圖" onclick="openRouteImage(this.src)" src="./day4_route_16x9.png"/>
+</div>
+</div>
+</details>
+<details class="day-accordion" data-day="5">
+<summary class="day-accordion-summary">
+<div class="day-accordion-left">
+<div class="day-accordion-top">
+<span class="day-badge">DAY 5</span>
+<span class="day-date">3/29（一）</span>
+</div>
+<div class="day-accordion-title">糸島</div>
+</div>
+<span class="day-chevron">⌄</span>
+</summary>
+<div class="day-accordion-body">
+<div class="card">
+<div class="big">🌊 糸島海岸＋咖啡廳 → 傍晚回福岡</div>
+<div class="step"><div class="num">1</div><div><b>福岡 → 糸島</b><div class="small">依當日交通安排前往海岸線。</div></div></div>
+<div class="step"><div class="num">2</div><div><b>糸島海岸</b><div class="small">海景散步、拍照。</div></div></div>
+<div class="step"><div class="num">3</div><div><b>海景咖啡廳</b><div class="small">保留一段放鬆時間。</div></div></div>
+<div class="step"><div class="num">4</div><div><b>夫婦岩／夕陽視情況安排</b><div class="small">若天氣好可延伸至夕陽時段。</div></div></div>
+<div class="step"><div class="num">5</div><div><b>傍晚回福岡</b><div class="small">務必預留回程交通時間。</div></div></div>
+</div>
+<div class="daily-photo-card">
+<img alt="糸島" onclick="openRouteImage(this.src)" src="./day5_photo_16x9.jpg"/>
+<div class="photo-caption">糸島｜點圖片可放大</div>
+</div>
+<div class="route-image-card">
+<b>🗺️ Day 5 地理位置／動線圖</b>
+<div class="caption">依目前行程整理的示意動線；正式 JR／巴士班次之後再更新。</div>
+<img alt="Day 5 路線圖" onclick="openRouteImage(this.src)" src="./day5_route_16x9.png"/>
+</div>
+</div>
+</details>
+<details class="day-accordion" data-day="6">
+<summary class="day-accordion-summary">
+<div class="day-accordion-left">
+<div class="day-accordion-top">
+<span class="day-badge">DAY 6</span>
+<span class="day-date">3/30（二）</span>
+</div>
+<div class="day-accordion-title">太宰府＋中洲</div>
+</div>
+<span class="day-chevron">⌄</span>
+</summary>
+<div class="day-accordion-body">
+<div class="card">
+<div class="big">⛩️ 太宰府天滿宮＋表參道 → 回博多休息 → 🌃 中洲屋台</div>
+<div class="step"><div class="num">1</div><div><b>太宰府天滿宮</b><div class="small">上午前往，避開較晚人潮。</div></div></div>
+<div class="step"><div class="num">2</div><div><b>太宰府表參道</b><div class="small">梅枝餅、伴手禮與街道散步。</div></div></div>
+<div class="step"><div class="num">3</div><div><b>回博多飯店休息</b><div class="small">下午補充體力。</div></div></div>
+<div class="step"><div class="num">4</div><div><b>中洲屋台</b><div class="small">晚上再出發，體驗福岡夜間屋台。</div></div></div>
+</div>
+<div class="daily-photo-card">
+<img alt="太宰府＋中洲" onclick="openRouteImage(this.src)" src="./day6_photo_16x9.jpg"/>
+<div class="photo-caption">太宰府＋中洲｜點圖片可放大</div>
+</div>
+<div class="route-image-card">
+<b>🗺️ Day 6 地理位置／動線圖</b>
+<div class="caption">依目前行程整理的示意動線；正式 JR／巴士班次之後再更新。</div>
+<img alt="Day 6 路線圖" onclick="openRouteImage(this.src)" src="./day6_route_16x9.png"/>
+</div>
+</div>
+</details>
+<details class="day-accordion" data-day="7">
+<summary class="day-accordion-summary">
+<div class="day-accordion-left">
+<div class="day-accordion-top">
+<span class="day-badge">DAY 7</span>
+<span class="day-date">3/31（三）</span>
+</div>
+<div class="day-accordion-title">博多最後散步＋回台</div>
+</div>
+<span class="day-chevron">⌄</span>
+</summary>
+<div class="day-accordion-body">
+<div class="card">
+<div class="big">⛩️ 櫛田神社 → 🐟 吉塚鰻魚飯 → 川端通商店街 → ✈️ 福岡機場</div>
+<div class="step"><div class="num">1</div><div><b>櫛田神社</b><div class="small">最後一天安排輕鬆市區散步。</div></div></div>
+<div class="step"><div class="num">2</div><div><b>吉塚鰻魚飯</b><div class="small">安排午餐，熱門時段需注意排隊。</div></div></div>
+<div class="step"><div class="num">3</div><div><b>川端通商店街</b><div class="small">最後採買與散步。</div></div></div>
+<div class="step"><div class="num">4</div><div><b>前往福岡機場</b><div class="small">預留充足時間辦理報到與退稅／行李。</div></div></div>
+</div>
+<div class="daily-photo-card">
+<img alt="博多最後散步＋回台" onclick="openRouteImage(this.src)" src="./day7_photo_16x9.jpg"/>
+<div class="photo-caption">博多最後散步＋回台｜點圖片可放大</div>
+</div>
+<div class="route-image-card">
+<b>🗺️ Day 7 地理位置／動線圖</b>
+<div class="caption">依目前行程整理的示意動線；正式 JR／巴士班次之後再更新。</div>
+<img alt="Day 7 路線圖" onclick="openRouteImage(this.src)" src="./day7_route_16x9.png"/>
+</div>
+</div>
+</details>
+</section>
+<section class="page" id="progress"><div class="title">已完成行程 ✅</div><div class="card"><div class="big">整趟旅行進度</div><div class="progress"><div class="bar" id="tripBar"></div></div><div class="progtext" id="tripText"></div></div><div class="card" id="tripChecks">
+<div class="check"><input data-k="d1" type="checkbox"/><label>DAY 1｜抵達福岡＋博多市區</label></div><div class="check"><input data-k="d2" type="checkbox"/><label>DAY 2｜豪斯登堡＋煙火</label></div><div class="check"><input data-k="d3a" type="checkbox"/><label>DAY 3｜舞鶴公園／福岡城跡</label></div><div class="check"><input data-k="d3b" type="checkbox"/><label>DAY 3｜太宰府</label></div><div class="check"><input data-k="d4" type="checkbox"/><label>DAY 4｜由布院</label></div><div class="check"><input data-k="d5a" type="checkbox"/><label>DAY 5｜糸島夫婦岩＋夕陽</label></div><div class="check"><input data-k="d5b" type="checkbox"/><label>DAY 5｜櫻井二見浦／夫婦岩</label></div><div class="check"><input data-k="d6" type="checkbox"/><label>DAY 6｜彈性行程</label></div><div class="check"><input data-k="d7" type="checkbox"/><label>DAY 7｜返台</label></div></div></section>
+<section class="page" id="lists">
+<div class="title">清單 🧳</div>
+<div class="small">行前準備，一切更順利！</div>
+<div class="title">出發／回程清單 ✈️</div>
+<details class="checklist-accordion" id="departChecklist">
+<summary>
+<div>
+<div class="checklist-title">🇹🇼 台灣 → 日本</div>
+<div class="checklist-sub" id="departStatus">出發前一週自動展開</div>
+</div>
+<span class="checklist-chevron">⌄</span>
+</summary>
+<div class="checklist-body" id="depart">
+<div class="check"><input data-k="passport" type="checkbox"/><label>護照</label></div><div class="check"><input data-k="money" type="checkbox"/><label>日幣／信用卡／錢包</label></div><div class="check"><input data-k="phone" type="checkbox"/><label>手機＋eSIM／漫遊</label></div><div class="check"><input data-k="power" type="checkbox"/><label>行動電源＋充電器＋充電線</label></div><div class="check"><input data-k="camera" type="checkbox"/><label>攝影器材／記憶卡／備用電池</label></div><div class="check"><input data-k="tickets" type="checkbox"/><label>電子機票／飯店／JR／豪斯登堡票券</label></div><div class="check"><input data-k="insurance" type="checkbox"/><label>旅遊保險／常用藥品</label></div><div class="check"><input data-k="home" type="checkbox"/><label>家中電器／門窗確認</label></div><div class="check"><input data-k="weight" type="checkbox"/><label>行李重量確認</label></div><div class="check"><input data-k="pickup" type="checkbox"/><label>3/25 12:10 小港機場接送確認</label></div></div>
+</details>
+<details class="checklist-accordion" id="returnChecklist">
+<summary>
+<div>
+<div class="checklist-title">🇯🇵 日本 → 台灣</div>
+<div class="checklist-sub" id="returnStatus">回程前一天自動展開</div>
+</div>
+<span class="checklist-chevron">⌄</span>
+</summary>
+<div class="checklist-body" id="return">
+<div class="check"><input data-k="rpass" type="checkbox"/><label>護照／手機／錢包</label></div><div class="check"><input data-k="rcam" type="checkbox"/><label>相機／記憶卡／所有攝影器材</label></div><div class="check"><input data-k="rpower" type="checkbox"/><label>行動電源／充電器／所有線材</label></div><div class="check"><input data-k="room" type="checkbox"/><label>房間／床下／浴室／冰箱／保險箱檢查</label></div><div class="check"><input data-k="flight" type="checkbox"/><label>BR119＋福岡機場交通確認</label></div><div class="check"><input data-k="tax" type="checkbox"/><label>免稅品／伴手禮整理</label></div><div class="check"><input data-k="liquid" type="checkbox"/><label>液體／托運行李重新整理</label></div><div class="check"><input data-k="rweight" type="checkbox"/><label>行李重量確認</label></div><div class="check"><input data-k="rsim" type="checkbox"/><label>日本網路方案／SIM 確認</label></div><div class="check"><input data-k="left" type="checkbox"/><label>確認沒有物品遺留飯店</label></div></div></details></section></div>
+<section class="page" id="wishlist"><div class="title">收藏 📝</div><div class="small">想買的、想吃的、備忘錄都在這裡！</div><div class="title">🛍️ 想買</div><div class="card"><b>🛍️ 想買</b><div class="addrow"><input id="buyInput" placeholder="例如：博多通饅頭" type="text"/><button class="btn" onclick="addItem('buy')">新增</button></div><div id="buyList"></div></div><div class="title">🍜 想吃</div><div class="card"><b>🍜 想吃</b><div class="addrow"><input id="eatInput" placeholder="例如：明太子料理" type="text"/><button class="btn" onclick="addItem('eat')">新增</button></div><div id="eatList"></div></div><div class="title">📝 旅行備忘</div><div class="card"><textarea id="notes" placeholder="餐廳、購物、拍照點、臨時更改…" rows="6"></textarea></div></section><section class="page" id="more">
+<div class="title">旅行工具 ☰</div>
+<div class="card">
+<b>💴 離線日幣換算</b>
+<div class="small">匯率手動設定後會保存在手機；斷網也能計算。</div>
+<div class="converter-grid" style="margin-top:10px">
+<div><div class="label">日圓 ¥</div><input id="yenInput" inputmode="decimal" oninput="calcYen()" placeholder="10000" type="number"/></div>
+<div><div class="label">1 日圓 ≈ 台幣</div><input id="rateInput" inputmode="decimal" oninput="saveRate();calcYen()" step="0.0001" type="number" value="0.22"/></div>
+</div>
+<div class="converter-result" id="yenResult">約 NT$ 0</div>
+<div class="quick-yen">
+<button onclick="setYen(1000)">¥1,000</button><button onclick="setYen(3000)">¥3,000</button>
+<button onclick="setYen(5000)">¥5,000</button><button onclick="setYen(10000)">¥10,000</button>
+</div>
+</div>
+<div class="card">
+<b>📴 離線也能用</b>
+<div class="small">行程、93句日文、清單、備忘、日幣換算、每日照片與交通攻略圖都會保存在 APP。外部網站／即時導航需網路。</div>
+</div>
+<div class="card">
+<b>📍 離線地址卡</b>
+<div class="small">斷網時可直接複製日文地址給司機或店員看。</div>
+<div class="offline-place"><div class="name">🏨 靜鐵 Hotel Prezio 博多站前</div><div class="addr">福岡県福岡市博多区博多駅前4-17-6</div><button class="copybtn" onclick="copyText('福岡県福岡市博多区博多駅前4-17-6')">複製地址</button></div>
+<div class="offline-place"><div class="name">🏰 豪斯登堡</div><div class="addr">長崎県佐世保市ハウステンボス町1-1</div><button class="copybtn" onclick="copyText('長崎県佐世保市ハウステンボス町1-1')">複製地址</button></div>
+<div class="offline-place"><div class="name">⛩️ 太宰府天満宮</div><div class="addr">福岡県太宰府市宰府4-7-1</div><button class="copybtn" onclick="copyText('福岡県太宰府市宰府4-7-1')">複製地址</button></div>
+<div class="offline-place"><div class="name">🌿 由布院駅</div><div class="addr">大分県由布市湯布院町川北8-2</div><button class="copybtn" onclick="copyText('大分県由布市湯布院町川北8-2')">複製地址</button></div>
+<div class="offline-place"><div class="name">🌅 桜井二見ヶ浦 夫婦岩</div><div class="addr">福岡県糸島市志摩桜井</div><button class="copybtn" onclick="copyText('福岡県糸島市志摩桜井')">複製地址</button></div>
+</div>
+<div class="small">把旅途中最常用的功能集中在這裡，臨時需要時可以直接開啟。</div>
+<div class="card">
+<b>⚡ 快速工具</b>
+<div class="btns" style="margin-top:12px">
 
 <a class="btn online-only" href="https://www.google.com/maps/search/?api=1&amp;query=Hakata+Station">🚉 博多站</a>
 <a class="btn online-only" href="https://translate.google.com/?sl=zh-TW&amp;tl=ja&amp;op=translate">🌐 Google 翻譯</a>
-<button class="showbig" onclick='showPhraseBig(${JSON.stringify(x.zh)},${JSON.stringify(x.ja)})'>🔎 放大給對方看</button></div>`;
+<button class="btn" onclick="show('japanese')">🇯🇵 旅行日文 93句</button>
+</div>
+</div>
+<div class="card">
+<b>🗺️ 常用導航</b>
+<div class="btns" style="margin-top:12px">
+<a class="btn online-only" href="https://www.google.com/maps/search/?api=1&amp;query=Huis+Ten+Bosch+Japan">🏰 豪斯登堡</a>
+<a class="btn online-only" href="https://www.google.com/maps/search/?api=1&amp;query=Yufuin+Station">🌿 由布院</a>
+<a class="btn online-only" href="https://www.google.com/maps/search/?api=1&amp;query=Sakurai+Futamigaura+Itoshima">🌅 糸島夫婦岩</a>
+<a class="btn online-only" href="https://www.google.com/maps/search/?api=1&amp;query=Dazaifu+Tenmangu">⛩️ 太宰府</a>
+</div>
+</div>
+<div class="card">
+<b>🚆 交通查詢</b>
+<div class="btns" style="margin-top:12px">
+<a class="btn online-only" href="https://www.jrkyushu.co.jp/english/">🚄 JR九州</a>
+<a class="btn online-only" href="https://www.google.com/maps/dir/?api=1">🧭 即時路線規劃</a>
+<a class="btn online-only" href="https://www.google.com/search?q=Fukuoka+weather">☀️ 福岡天氣</a>
+<a class="btn online-only" href="https://www.google.com/search?q=JPY+TWD">💴 日圓匯率</a>
+</div>
+</div>
+<div class="card">
+<b>🆘 緊急快速入口</b>
+<div class="small" style="margin:8px 0 12px">需要協助時可直接打開旅行日文的「緊急」分類，或搜尋附近設施。</div>
+<div class="btns">
+<button class="btn" onclick="show('japanese');setTimeout(()=&gt;{phraseCat='緊急';document.getElementById('phraseSearch').value='';renderPhraseCats();renderPhrases()},50)">🆘 緊急日文</button>
+<a class="btn online-only" href="https://www.google.com/maps/search/?api=1&amp;query=police+station">👮 附近警察</a>
+<a class="btn online-only" href="https://www.google.com/maps/search/?api=1&amp;query=hospital">🏥 附近醫院</a>
+</div>
+</div>
+<div class="reco-wrap">
+<div class="title">福岡人氣參考 🍜🛍️</div>
+<div class="small">依福岡官方觀光推薦、博多站官方商場資訊與旅行便利性整理。不是硬性官方排名，可以當作「看到有興趣就勾起來」的候選清單。</div>
+<details class="reco-accordion">
+<summary><div><div class="reco-head">🍜 必吃 TOP 6</div><div class="reco-sub">拉麵・もつ鍋・明太子・屋台・博多うどん</div></div><span class="reco-chevron">⌄</span></summary>
+<div class="reco-body">
+<div class="reco-item">
+<div class="reco-top">
+<div class="reco-rank">#1</div>
+<input class="fukuoka-reco-check" data-key="fukuoka_eat_1" type="checkbox"/>
+<div>
+<div class="reco-name">元祖博多めんたい重</div>
+<div class="reco-desc">明太子重／明太子料理</div>
+<div class="reco-location">📍 福岡市中央区西中洲6-15</div>
+</div>
+</div>
+<div class="reco-actions">
+<a class="online-only" href="https://www.google.com/maps/search/?api=1&amp;query=Ganso+Hakata+Mentaiju+Nishinakasu">Google Maps</a>
+<button onclick="copyText('福岡市中央区西中洲6-15')">複製地址</button>
+</div>
+</div>
+<div class="reco-item">
+<div class="reco-top">
+<div class="reco-rank">#2</div>
+<input class="fukuoka-reco-check" data-key="fukuoka_eat_2" type="checkbox"/>
+<div>
+<div class="reco-name">博多らーめん Shin-Shin</div>
+<div class="reco-desc">博多豚骨拉麵；博多DEITOS 2F 博多めん街道</div>
+<div class="reco-location">📍 福岡市博多区博多駅中央街1-1</div>
+</div>
+</div>
+<div class="reco-actions">
+<a class="online-only" href="https://www.google.com/maps/search/?api=1&amp;query=Hakata+Ramen+ShinShin+Hakata+Deitos">Google Maps</a>
+<button onclick="copyText('福岡市博多区博多駅中央街1-1')">複製地址</button>
+</div>
+</div>
+<div class="reco-item">
+<div class="reco-top">
+<div class="reco-rank">#3</div>
+<input class="fukuoka-reco-check" data-key="fukuoka_eat_3" type="checkbox"/>
+<div>
+<div class="reco-name">博多もつ鍋 おおやま KITTE博多店</div>
+<div class="reco-desc">福岡代表名物牛腸鍋；博多站直結 KITTE 9F</div>
+<div class="reco-location">📍 福岡市博多区博多駅中央街9-1</div>
+</div>
+</div>
+<div class="reco-actions">
+<a class="online-only" href="https://www.google.com/maps/search/?api=1&amp;query=Motsunabe+Ooyama+KITTE+Hakata">Google Maps</a>
+<button onclick="copyText('福岡市博多区博多駅中央街9-1')">複製地址</button>
+</div>
+</div>
+<div class="reco-item">
+<div class="reco-top">
+<div class="reco-rank">#4</div>
+<input class="fukuoka-reco-check" data-key="fukuoka_eat_4" type="checkbox"/>
+<div>
+<div class="reco-name">博多屋台 中洲十番</div>
+<div class="reco-desc">一次可吃拉麵、燒拉麵、餃子、明太子等屋台料理</div>
+<div class="reco-location">📍 福岡市博多区中洲1-8</div>
+</div>
+</div>
+<div class="reco-actions">
+<a class="online-only" href="https://www.google.com/maps/search/?api=1&amp;query=Nakasu+Juban+Fukuoka">Google Maps</a>
+<button onclick="copyText('福岡市博多区中洲1-8')">複製地址</button>
+</div>
+</div>
+<div class="reco-item">
+<div class="reco-top">
+<div class="reco-rank">#5</div>
+<input class="fukuoka-reco-check" data-key="fukuoka_eat_5" type="checkbox"/>
+<div>
+<div class="reco-name">因幡うどん 博多デイトス店</div>
+<div class="reco-desc">博多軟麵系烏龍；DEITOS B1F</div>
+<div class="reco-location">📍 福岡市博多区博多駅中央街1-1</div>
+</div>
+</div>
+<div class="reco-actions">
+<a class="online-only" href="https://www.google.com/maps/search/?api=1&amp;query=Inaba+Udon+Hakata+Deitos">Google Maps</a>
+<button onclick="copyText('福岡市博多区博多駅中央街1-1')">複製地址</button>
+</div>
+</div>
+<div class="reco-item">
+<div class="reco-top">
+<div class="reco-rank">#6</div>
+<input class="fukuoka-reco-check" data-key="fukuoka_eat_6" type="checkbox"/>
+<div>
+<div class="reco-name">博多一幸舎</div>
+<div class="reco-desc">博多豚骨拉麵；DEITOS 2F 博多めん街道</div>
+<div class="reco-location">📍 福岡市博多区博多駅中央街1-1</div>
+</div>
+</div>
+<div class="reco-actions">
+<a class="online-only" href="https://www.google.com/maps/search/?api=1&amp;query=Hakata+Ikkousha+Hakata+Deitos">Google Maps</a>
+<button onclick="copyText('福岡市博多区博多駅中央街1-1')">複製地址</button>
+</div>
+</div></div>
+</details>
+<details class="reco-accordion">
+<summary><div><div class="reco-head">🎁 必買 TOP 6</div><div class="reco-sub">博多通りもん・めんべい・明太子・あまおう等</div></div><span class="reco-chevron">⌄</span></summary>
+<div class="reco-body">
+<div class="reco-item">
+<div class="reco-top">
+<div class="reco-rank">#1</div>
+<input class="fukuoka-reco-check" data-key="fukuoka_buy_1" type="checkbox"/>
+<div>
+<div class="reco-name">博多通りもん｜明月堂</div>
+<div class="reco-desc">福岡經典銘菓；DEITOS 1F みやげもん市場可買</div>
+<div class="reco-location">📍 福岡市博多区博多駅中央街1-1</div>
+</div>
+</div>
+<div class="reco-actions">
+<a class="online-only" href="https://www.google.com/maps/search/?api=1&amp;query=Meigetsudo+Hakata+Deitos">Google Maps</a>
+<button onclick="copyText('福岡市博多区博多駅中央街1-1')">複製地址</button>
+</div>
+</div>
+<div class="reco-item">
+<div class="reco-top">
+<div class="reco-rank">#2</div>
+<input class="fukuoka-reco-check" data-key="fukuoka_buy_2" type="checkbox"/>
+<div>
+<div class="reco-name">めんべい</div>
+<div class="reco-desc">福岡人氣明太子仙貝；博多阪急／博多站伴手禮區可找</div>
+<div class="reco-location">📍 福岡市博多区博多駅中央街1-1</div>
+</div>
+</div>
+<div class="reco-actions">
+<a class="online-only" href="https://www.google.com/maps/search/?api=1&amp;query=Menbei+Hakata+Station">Google Maps</a>
+<button onclick="copyText('福岡市博多区博多駅中央街1-1')">複製地址</button>
+</div>
+</div>
+<div class="reco-item">
+<div class="reco-top">
+<div class="reco-rank">#3</div>
+<input class="fukuoka-reco-check" data-key="fukuoka_buy_3" type="checkbox"/>
+<div>
+<div class="reco-name">明太子｜博多の味 やまや</div>
+<div class="reco-desc">福岡代表伴手禮；DEITOS 1F</div>
+<div class="reco-location">📍 福岡市博多区博多駅中央街1-1</div>
+</div>
+</div>
+<div class="reco-actions">
+<a class="online-only" href="https://www.google.com/maps/search/?api=1&amp;query=Yamaya+Hakata+Deitos">Google Maps</a>
+<button onclick="copyText('福岡市博多区博多駅中央街1-1')">複製地址</button>
+</div>
+</div>
+<div class="reco-item">
+<div class="reco-top">
+<div class="reco-rank">#4</div>
+<input class="fukuoka-reco-check" data-key="fukuoka_buy_4" type="checkbox"/>
+<div>
+<div class="reco-name">あまおう苺スイーツ｜伊都きんぐ</div>
+<div class="reco-desc">福岡草莓甜點；博多站 いっぴん通り</div>
+<div class="reco-location">📍 福岡市博多区博多駅中央街1-1</div>
+</div>
+</div>
+<div class="reco-actions">
+<a class="online-only" href="https://www.google.com/maps/search/?api=1&amp;query=Itoking+Hakata+Station">Google Maps</a>
+<button onclick="copyText('福岡市博多区博多駅中央街1-1')">複製地址</button>
+</div>
+</div>
+<div class="reco-item">
+<div class="reco-top">
+<div class="reco-rank">#5</div>
+<input class="fukuoka-reco-check" data-key="fukuoka_buy_5" type="checkbox"/>
+<div>
+<div class="reco-name">博多の女｜二鶴堂</div>
+<div class="reco-desc">經典博多甜點；DEITOS 1F みやげもん市場</div>
+<div class="reco-location">📍 福岡市博多区博多駅中央街1-1</div>
+</div>
+</div>
+<div class="reco-actions">
+<a class="online-only" href="https://www.google.com/maps/search/?api=1&amp;query=Hakata+no+Hito+Nikakudo+Hakata">Google Maps</a>
+<button onclick="copyText('福岡市博多区博多駅中央街1-1')">複製地址</button>
+</div>
+</div>
+<div class="reco-item">
+<div class="reco-top">
+<div class="reco-rank">#6</div>
+<input class="fukuoka-reco-check" data-key="fukuoka_buy_6" type="checkbox"/>
+<div>
+<div class="reco-name">元祖博多めんたい重 博多｜便當・伴手禮</div>
+<div class="reco-desc">博多站內可買明太重便當與伴手禮</div>
+<div class="reco-location">📍 福岡市博多区博多駅中央街1-1 JR博多駅構内</div>
+</div>
+</div>
+<div class="reco-actions">
+<a class="online-only" href="https://www.google.com/maps/search/?api=1&amp;query=Ganso+Hakata+Mentaiju+Hakata+Station">Google Maps</a>
+<button onclick="copyText('福岡市博多区博多駅中央街1-1 JR博多駅構内')">複製地址</button>
+</div>
+</div></div>
+</details>
+<details class="reco-accordion">
+<summary><div><div class="reco-head">🛍️ 必逛 TOP 6</div><div class="reco-sub">以博多站周邊為主，Day 6 特別好用</div></div><span class="reco-chevron">⌄</span></summary>
+<div class="reco-body">
+<div class="reco-item">
+<div class="reco-top">
+<div class="reco-rank">#1</div>
+<input class="fukuoka-reco-check" data-key="fukuoka_browse_1" type="checkbox"/>
+<div>
+<div class="reco-name">マイング MING</div>
+<div class="reco-desc">博多站直結大型伴手禮區；適合一次買齊九州名產</div>
+<div class="reco-location">📍 福岡市博多区博多駅中央街1-1</div>
+</div>
+</div>
+<div class="reco-actions">
+<a class="online-only" href="https://www.google.com/maps/search/?api=1&amp;query=Ming+Hakata">Google Maps</a>
+<button onclick="copyText('福岡市博多区博多駅中央街1-1')">複製地址</button>
+</div>
+</div>
+<div class="reco-item">
+<div class="reco-top">
+<div class="reco-rank">#2</div>
+<input class="fukuoka-reco-check" data-key="fukuoka_browse_2" type="checkbox"/>
+<div>
+<div class="reco-name">博多デイトス DEITOS</div>
+<div class="reco-desc">博多めん街道＋みやげもん市場＋餐飲區集中</div>
+<div class="reco-location">📍 福岡市博多区博多駅中央街1-1</div>
+</div>
+</div>
+<div class="reco-actions">
+<a class="online-only" href="https://www.google.com/maps/search/?api=1&amp;query=Hakata+Deitos">Google Maps</a>
+<button onclick="copyText('福岡市博多区博多駅中央街1-1')">複製地址</button>
+</div>
+</div>
+<div class="reco-item">
+<div class="reco-top">
+<div class="reco-rank">#3</div>
+<input class="fukuoka-reco-check" data-key="fukuoka_browse_3" type="checkbox"/>
+<div>
+<div class="reco-name">アミュプラザ博多 AMU PLAZA</div>
+<div class="reco-desc">博多站直結；服飾、生活雜貨、餐飲</div>
+<div class="reco-location">📍 福岡市博多区博多駅中央街1-1</div>
+</div>
+</div>
+<div class="reco-actions">
+<a class="online-only" href="https://www.google.com/maps/search/?api=1&amp;query=AMU+Plaza+Hakata">Google Maps</a>
+<button onclick="copyText('福岡市博多区博多駅中央街1-1')">複製地址</button>
+</div>
+</div>
+<div class="reco-item">
+<div class="reco-top">
+<div class="reco-rank">#4</div>
+<input class="fukuoka-reco-check" data-key="fukuoka_browse_4" type="checkbox"/>
+<div>
+<div class="reco-name">KITTE博多</div>
+<div class="reco-desc">博多站直結；餐廳與購物，Day 6 很順路</div>
+<div class="reco-location">📍 福岡市博多区博多駅中央街9-1</div>
+</div>
+</div>
+<div class="reco-actions">
+<a class="online-only" href="https://www.google.com/maps/search/?api=1&amp;query=KITTE+Hakata">Google Maps</a>
+<button onclick="copyText('福岡市博多区博多駅中央街9-1')">複製地址</button>
+</div>
+</div>
+<div class="reco-item">
+<div class="reco-top">
+<div class="reco-rank">#5</div>
+<input class="fukuoka-reco-check" data-key="fukuoka_browse_5" type="checkbox"/>
+<div>
+<div class="reco-name">博多阪急</div>
+<div class="reco-desc">百貨公司＋地下食品伴手禮；博多站直結</div>
+<div class="reco-location">📍 福岡市博多区博多駅中央街1-1</div>
+</div>
+</div>
+<div class="reco-actions">
+<a class="online-only" href="https://www.google.com/maps/search/?api=1&amp;query=Hakata+Hankyu">Google Maps</a>
+<button onclick="copyText('福岡市博多区博多駅中央街1-1')">複製地址</button>
+</div>
+</div>
+<div class="reco-item">
+<div class="reco-top">
+<div class="reco-rank">#6</div>
+<input class="fukuoka-reco-check" data-key="fukuoka_browse_6" type="checkbox"/>
+<div>
+<div class="reco-name">キャナルシティ博多</div>
+<div class="reco-desc">大型複合商場；博多站步行約10分鐘、櫛田神社前站約3分鐘</div>
+<div class="reco-location">📍 福岡市博多区住吉1-2</div>
+</div>
+</div>
+<div class="reco-actions">
+<a class="online-only" href="https://www.google.com/maps/search/?api=1&amp;query=Canal+City+Hakata">Google Maps</a>
+<button onclick="copyText('福岡市博多区住吉1-2')">複製地址</button>
+</div>
+</div></div>
+</details>
+</div>
+</section>
+
+<div class="image-modal" id="routeImageModal" onclick="if(event.target.id==='routeImageModal')forceCloseRouteImage()">
+<button class="close" onclick="forceCloseRouteImage()">×</button>
+<img alt="詳細路線圖" id="routeImageModalImg"/>
+</div>
+<section class="page" id="japanese">
+<div class="title">日文求助 🇯🇵</div>
+<div class="small">這趟九州自由行會實際用到的旅行日文：JR、豪斯登堡、由布院、糸島、太宰府、飯店、餐廳與購物。</div>
+<div class="phrase-search">
+<input id="phraseSearch" placeholder="搜尋中文或日文，例如：博多、結帳、巴士…" type="text"/>
+<div class="phrase-cats" id="phraseCats"></div>
+</div>
+<div class="small" id="phraseCount"></div>
+<div id="phraseList"></div>
+</section>
+<div class="phrase-modal" id="phraseModal">
+<button class="phrase-close" onclick="closePhraseModal()">×</button>
+<div class="phrase-modal-inner">
+<div class="phrase-modal-zh" id="phraseModalZh"></div>
+<div class="phrase-modal-ja" id="phraseModalJa"></div>
+</div>
+</div>
+<nav class="tabs"><button class="active" data-p="today"><span>🏠</span>今日</button><button data-p="plan"><span>🗓️</span>行程</button><button data-p="progress"><span>✅</span>完成</button><button data-p="lists"><span>🧳</span>清單</button><button data-p="wishlist"><span>📝</span>收藏</button><button data-p="more"><span>☰</span>更多</button></nav>
+<script>
+function show(id){document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('active'));document.getElementById(id).classList.add('active');let b=document.querySelector('[data-p="'+id+'"]');if(b)b.classList.add('active');scrollTo(0,0)}document.querySelector('.tabs').onclick=e=>{let b=e.target.closest('button[data-p]');if(b)show(b.dataset.p)};
+const dep=new Date('2027-03-25T15:30:00+08:00');function tick(){let x=dep-new Date(),e=document.getElementById('count');if(x<=0){e.textContent='🇯🇵 九州旅行開始！';return}let d=Math.floor(x/86400000);x%=86400000;let h=Math.floor(x/3600000);x%=3600000;let m=Math.floor(x/60000);e.textContent=d+' 天 '+h+' 小時 '+m+' 分'}tick();setInterval(tick,60000);
+document.querySelectorAll('#depart input,#return input,#tripChecks input').forEach(c=>{let k='jw3_'+c.dataset.k;c.checked=localStorage.getItem(k)==='1';c.onchange=()=>{localStorage.setItem(k,c.checked?'1':'0');progress();updateTravelChecklists()}});
+function progress(){let a=[...document.querySelectorAll('#tripChecks input')],n=a.filter(x=>x.checked).length,p=Math.round(n/a.length*100);document.getElementById('tripBar').style.width=p+'%';document.getElementById('tripText').textContent='已完成 '+n+' / '+a.length+'｜'+p+'%'}progress();
+function load(type){let a=JSON.parse(localStorage.getItem('jw3_'+type)||'[]'),el=document.getElementById(type+'List');el.innerHTML='';a.forEach((x,i)=>{let r=document.createElement('div');r.className='check';r.innerHTML='<input type="checkbox" '+(x.done?'checked':'')+'><label>'+x.text.replace(/</g,'&lt;')+'</label><button class="del">刪除</button>';r.querySelector('input').onchange=e=>{a[i].done=e.target.checked;localStorage.setItem('jw3_'+type,JSON.stringify(a));load(type)};r.querySelector('.del').onclick=()=>{a.splice(i,1);localStorage.setItem('jw3_'+type,JSON.stringify(a));load(type)};el.appendChild(r)})}
+function addItem(type){let i=document.getElementById(type+'Input'),t=i.value.trim();if(!t)return;let a=JSON.parse(localStorage.getItem('jw3_'+type)||'[]');a.push({text:t,done:false});localStorage.setItem('jw3_'+type,JSON.stringify(a));i.value='';load(type)}load('buy');load('eat');
+let n=document.getElementById('notes');n.value=localStorage.getItem('jw3_notes')||'';n.oninput=()=>localStorage.setItem('jw3_notes',n.value);
+if('serviceWorker'in navigator)addEventListener('load',()=>navigator.serviceWorker.register('./sw.js'));
+
+const tripReminders = {
+  "2027-03-25": {
+    title:"DAY 1｜今日出發 ✈️",
+    text:"12:10 小港機場接送 → BR120 15:30。抵達福岡後先入住靜鐵 Hotel Prezio 博多站前。",
+    nav:"https://www.google.com/maps/search/?api=1&query=Kaohsiung+International+Airport"
+  },
+  "2027-03-26": {
+    title:"DAY 2｜豪斯登堡＋煙火 🎆",
+    text:"提早到博多站確認特急與月台。煙火結束後優先往車站移動，回程直達特急優先。",
+    nav:"https://www.google.com/maps/search/?api=1&query=Hakata+Station"
+  },
+  "2027-03-27": {
+    title:"DAY 3｜福岡賞櫻＋天神 🌸",
+    text:"上午賞櫻、下午太宰府。由舞鶴公園前往太宰府時，記得在天神轉西鐵。",
+    nav:"https://www.google.com/maps/search/?api=1&query=Maizuru+Park+Fukuoka"
+  },
+  "2027-03-28": {
+    title:"DAY 4｜由布院 🌿",
+    text:"出發前確認 JR 實際車次與指定席；回程也請預留足夠時間到由布院站。",
+    nav:"https://www.google.com/maps/search/?api=1&query=Yufuin+Station"
+  },
+  "2027-03-29": {
+    title:"DAY 5｜糸島夫婦岩＋夕陽 🌅",
+    text:"主目標是夫婦岩與夕陽。最重要：出發前再次確認二見浦回程巴士末班時間。",
+    nav:"https://www.google.com/maps/search/?api=1&query=Sakurai+Futamigaura+Itoshima"
+  },
+  "2027-03-30": {
+    title:"DAY 6｜博多站休閒＋伴手禮 🛍️",
+    text:"今天不用趕車：博多站周邊吃吃、MING／DEITOS 買伴手禮，晚上回飯店整理行李。",
+    nav:"https://www.google.com/maps/search/?api=1&query=Ming+Hakata"
+  },
+  "2027-03-31": {
+    title:"DAY 7｜返台 ✈️",
+    text:"退房前完成回程清單；預留足夠時間前往福岡機場國際線搭乘 BR119。",
+    nav:"https://www.google.com/maps/search/?api=1&query=Fukuoka+Airport+International+Terminal"
+  }
+};
+
+function tokyoDateString(offsetDays=0){
+  const now = new Date();
+  const tokyoMs = now.getTime() + (9*60 + now.getTimezoneOffset())*60000;
+  const tokyo = new Date(tokyoMs);
+  tokyo.setUTCDate(tokyo.getUTCDate()+offsetDays);
+  const y=tokyo.getUTCFullYear(), m=String(tokyo.getUTCMonth()+1).padStart(2,'0'), d=String(tokyo.getUTCDate()).padStart(2,'0');
+  return `${y}-${m}-${d}`;
+}
+
+function updateSmartReminder(){
+  const todayKey = tokyoDateString(0);
+  const tomorrowKey = tokyoDateString(1);
+  const box = document.getElementById('smartReminder');
+  const label = document.getElementById('reminderLabel');
+  const title = document.getElementById('reminderTitle');
+  const text = document.getElementById('reminderText');
+  const nav = document.getElementById('reminderNavBtn');
+
+  let data=null, mode='';
+  if(tripReminders[todayKey]){ data=tripReminders[todayKey]; mode='today'; }
+  else if(tripReminders[tomorrowKey]){ data=tripReminders[tomorrowKey]; mode='tomorrow'; }
+
+  if(!data){ box.classList.add('hidden'); return; }
+
+  box.classList.remove('hidden','tomorrow','todaynow');
+  box.classList.add(mode==='today'?'todaynow':'tomorrow');
+  label.textContent = mode==='today' ? '今日提醒' : '明日提醒';
+  title.textContent = data.title;
+  text.textContent = data.text;
+  nav.href = data.nav;
+}
+updateSmartReminder();
+document.addEventListener('visibilitychange',()=>{ if(!document.hidden) updateSmartReminder(); });
+
+
+function openRouteImage(src){const m=document.getElementById('routeImageModal'),i=document.getElementById('routeImageModalImg');if(!m||!i)return;i.src=src;m.classList.add('open');document.body.style.overflow='hidden'}
+function forceCloseRouteImage(){const m=document.getElementById('routeImageModal');if(m)m.classList.remove('open');document.body.style.overflow=''}
+
+const JAPANESE_PHRASES = [{"cat": "基本", "zh": "不好意思／打擾一下", "ja": "すみません。", "romaji": "Sumimasen."}, {"cat": "基本", "zh": "非常感謝", "ja": "ありがとうございます。", "romaji": "Arigatou gozaimasu."}, {"cat": "基本", "zh": "我不會說日文", "ja": "日本語が話せません。", "romaji": "Nihongo ga hanasemasen."}, {"cat": "基本", "zh": "可以請您說慢一點嗎？", "ja": "ゆっくり話していただけますか？", "romaji": "Yukkuri hanashite itadakemasu ka?"}, {"cat": "基本", "zh": "麻煩再說一次", "ja": "もう一度お願いします。", "romaji": "Mou ichido onegaishimasu."}, {"cat": "基本", "zh": "可以請您寫下來嗎？", "ja": "書いていただけますか？", "romaji": "Kaite itadakemasu ka?"}, {"cat": "基本", "zh": "可以在地圖上告訴我嗎？", "ja": "地図で教えていただけますか？", "romaji": "Chizu de oshiete itadakemasu ka?"}, {"cat": "基本", "zh": "可以請您看一下這個嗎？", "ja": "これを見ていただけますか？", "romaji": "Kore o mite itadakemasu ka?"}, {"cat": "JR／地鐵", "zh": "請問博多站在哪裡？", "ja": "博多駅はどこですか？", "romaji": "Hakata-eki wa doko desu ka?"}, {"cat": "JR／地鐵", "zh": "這班電車有到博多站嗎？", "ja": "この電車は博多駅に行きますか？", "romaji": "Kono densha wa Hakata-eki ni ikimasu ka?"}, {"cat": "JR／地鐵", "zh": "搭這班車對嗎？", "ja": "この電車で合っていますか？", "romaji": "Kono densha de atteimasu ka?"}, {"cat": "JR／地鐵", "zh": "請問是第幾月台？", "ja": "何番ホームですか？", "romaji": "Nanban hoomu desu ka?"}, {"cat": "JR／地鐵", "zh": "需要轉車嗎？", "ja": "乗り換えは必要ですか？", "romaji": "Norikae wa hitsuyou desu ka?"}, {"cat": "JR／地鐵", "zh": "請問在哪裡轉車？", "ja": "どこで乗り換えますか？", "romaji": "Doko de norikaemasu ka?"}, {"cat": "JR／地鐵", "zh": "有指定席嗎？", "ja": "指定席はありますか？", "romaji": "Shiteiseki wa arimasu ka?"}, {"cat": "JR／地鐵", "zh": "麻煩兩位的票", "ja": "二人分お願いします。", "romaji": "Futari-bun onegaishimasu."}, {"cat": "JR／地鐵", "zh": "下一班車幾點？", "ja": "次の電車は何時ですか？", "romaji": "Tsugi no densha wa nanji desu ka?"}, {"cat": "JR／地鐵", "zh": "末班車幾點？", "ja": "最終電車は何時ですか？", "romaji": "Saishuu densha wa nanji desu ka?"}, {"cat": "JR／地鐵", "zh": "這張票可以搭這班車嗎？", "ja": "この切符でこの電車に乗れますか？", "romaji": "Kono kippu de kono densha ni noremasu ka?"}, {"cat": "JR／地鐵", "zh": "這班車需要預約嗎？", "ja": "この電車は予約が必要ですか？", "romaji": "Kono densha wa yoyaku ga hitsuyou desu ka?"}, {"cat": "豪斯登堡", "zh": "我想去豪斯登堡", "ja": "ハウステンボスに行きたいです。", "romaji": "Huis Ten Bosch ni ikitai desu."}, {"cat": "豪斯登堡", "zh": "這班車有到豪斯登堡嗎？", "ja": "この電車はハウステンボスに行きますか？", "romaji": "Kono densha wa Huis Ten Bosch ni ikimasu ka?"}, {"cat": "豪斯登堡", "zh": "煙火幾點開始？", "ja": "花火は何時からですか？", "romaji": "Hanabi wa nanji kara desu ka?"}, {"cat": "豪斯登堡", "zh": "在哪裡可以看煙火？", "ja": "花火はどこで見られますか？", "romaji": "Hanabi wa doko de miraremasu ka?"}, {"cat": "豪斯登堡", "zh": "豪斯登堡站往哪邊？", "ja": "ハウステンボス駅はどちらですか？", "romaji": "Huis Ten Bosch-eki wa dochira desu ka?"}, {"cat": "豪斯登堡", "zh": "我要回博多", "ja": "博多まで帰りたいです。", "romaji": "Hakata made kaeritai desu."}, {"cat": "豪斯登堡", "zh": "有直達博多嗎？", "ja": "博多まで直通ですか？", "romaji": "Hakata made chokutsuu desu ka?"}, {"cat": "豪斯登堡", "zh": "需要在早岐轉車嗎？", "ja": "早岐で乗り換えますか？", "romaji": "Haiki de norikaemasu ka?"}, {"cat": "豪斯登堡", "zh": "回博多的末班車幾點？", "ja": "博多行きの最終列車は何時ですか？", "romaji": "Hakata-yuki no saishuu ressha wa nanji desu ka?"}, {"cat": "由布院", "zh": "我要去由布院", "ja": "由布院に行きたいです。", "romaji": "Yufuin ni ikitai desu."}, {"cat": "由布院", "zh": "這班車有到由布院嗎？", "ja": "この電車は由布院に行きますか？", "romaji": "Kono densha wa Yufuin ni ikimasu ka?"}, {"cat": "由布院", "zh": "由布院站在哪裡？", "ja": "由布院駅はどこですか？", "romaji": "Yufuin-eki wa doko desu ka?"}, {"cat": "由布院", "zh": "金鱗湖怎麼走？", "ja": "金鱗湖へはどう行けばいいですか？", "romaji": "Kinrinko e wa dou ikeba ii desu ka?"}, {"cat": "由布院", "zh": "回博多的車幾點？", "ja": "博多行きの電車は何時ですか？", "romaji": "Hakata-yuki no densha wa nanji desu ka?"}, {"cat": "糸島", "zh": "我要去櫻井二見浦", "ja": "桜井二見ヶ浦に行きたいです。", "romaji": "Sakurai Futamigaura ni ikitai desu."}, {"cat": "糸島", "zh": "夫婦岩在哪裡？", "ja": "夫婦岩はどこですか？", "romaji": "Meoto Iwa wa doko desu ka?"}, {"cat": "糸島", "zh": "巴士站在哪裡？", "ja": "バス停はどこですか？", "romaji": "Basutei wa doko desu ka?"}, {"cat": "糸島", "zh": "這班巴士有到夫婦岩嗎？", "ja": "このバスは夫婦岩に行きますか？", "romaji": "Kono basu wa Meoto Iwa ni ikimasu ka?"}, {"cat": "糸島", "zh": "我要回九大学研都市站", "ja": "九大学研都市駅に戻りたいです。", "romaji": "Kyudai-Gakkentoshi-eki ni modoritai desu."}, {"cat": "糸島", "zh": "末班巴士幾點？", "ja": "最終バスは何時ですか？", "romaji": "Saishuu basu wa nanji desu ka?"}, {"cat": "糸島", "zh": "看完夕陽後還有巴士嗎？", "ja": "夕日を見た後でもバスはありますか？", "romaji": "Yuuhi o mita ato demo basu wa arimasu ka?"}, {"cat": "太宰府", "zh": "我要去太宰府", "ja": "太宰府に行きたいです。", "romaji": "Dazaifu ni ikitai desu."}, {"cat": "太宰府", "zh": "需要在西鐵二日市轉車嗎？", "ja": "西鉄二日市で乗り換えますか？", "romaji": "Nishitetsu Futsukaichi de norikaemasu ka?"}, {"cat": "太宰府", "zh": "太宰府天滿宮怎麼走？", "ja": "太宰府天満宮へはどう行けばいいですか？", "romaji": "Dazaifu Tenmangu e wa dou ikeba ii desu ka?"}, {"cat": "太宰府", "zh": "回天神要搭哪一班？", "ja": "天神に戻るにはどの電車に乗ればいいですか？", "romaji": "Tenjin ni modoru ni wa dono densha ni noreba ii desu ka?"}, {"cat": "飯店", "zh": "我要辦理入住", "ja": "チェックインをお願いします。", "romaji": "Chekku-in o onegaishimasu."}, {"cat": "飯店", "zh": "我有預約", "ja": "予約しています。", "romaji": "Yoyaku shiteimasu."}, {"cat": "飯店", "zh": "護照在這裡", "ja": "パスポートはこちらです。", "romaji": "Pasupooto wa kochira desu."}, {"cat": "飯店", "zh": "可以幫我寄放行李嗎？", "ja": "荷物を預かっていただけますか？", "romaji": "Nimotsu o azukatte itadakemasu ka?"}, {"cat": "飯店", "zh": "退房後可以寄放行李嗎？", "ja": "チェックアウト後も荷物を預けられますか？", "romaji": "Chekku-auto go mo nimotsu o azukeraremasu ka?"}, {"cat": "飯店", "zh": "可以幫忙叫計程車嗎？", "ja": "タクシーを呼んでいただけますか？", "romaji": "Takushii o yonde itadakemasu ka?"}, {"cat": "飯店", "zh": "請告訴我 Wi-Fi 密碼", "ja": "Wi-Fiのパスワードを教えてください。", "romaji": "Wi-Fi no pasuwaado o oshiete kudasai."}, {"cat": "餐廳", "zh": "兩位", "ja": "二人です。", "romaji": "Futari desu."}, {"cat": "餐廳", "zh": "我們沒有預約", "ja": "予約していません。", "romaji": "Yoyaku shiteimasen."}, {"cat": "餐廳", "zh": "現在可以入店嗎？", "ja": "今、入れますか？", "romaji": "Ima, hairemasu ka?"}, {"cat": "餐廳", "zh": "大概要等多久？", "ja": "どのくらい待ちますか？", "romaji": "Dono kurai machimasu ka?"}, {"cat": "餐廳", "zh": "推薦什麼？", "ja": "おすすめは何ですか？", "romaji": "Osusume wa nan desu ka?"}, {"cat": "餐廳", "zh": "我要這個", "ja": "これをお願いします。", "romaji": "Kore o onegaishimasu."}, {"cat": "餐廳", "zh": "一樣的請給我兩份", "ja": "同じものを二つお願いします。", "romaji": "Onaji mono o futatsu onegaishimasu."}, {"cat": "餐廳", "zh": "會辣嗎？", "ja": "辛いですか？", "romaji": "Karai desu ka?"}, {"cat": "餐廳", "zh": "麻煩給我水", "ja": "お水をお願いします。", "romaji": "Omizu o onegaishimasu."}, {"cat": "餐廳", "zh": "麻煩結帳", "ja": "お会計をお願いします。", "romaji": "Okaikei o onegaishimasu."}, {"cat": "餐廳", "zh": "可以刷卡嗎？", "ja": "クレジットカードは使えますか？", "romaji": "Kurejitto kaado wa tsukaemasu ka?"}, {"cat": "餐廳", "zh": "可以外帶嗎？", "ja": "持ち帰りできますか？", "romaji": "Mochikaeri dekimasu ka?"}, {"cat": "餐廳", "zh": "非常好吃，謝謝", "ja": "とてもおいしかったです。ありがとうございます。", "romaji": "Totemo oishikatta desu. Arigatou gozaimasu."}, {"cat": "購物", "zh": "這個多少錢？", "ja": "これはいくらですか？", "romaji": "Kore wa ikura desu ka?"}, {"cat": "購物", "zh": "有其他顏色嗎？", "ja": "他の色はありますか？", "romaji": "Hoka no iro wa arimasu ka?"}, {"cat": "購物", "zh": "還有庫存嗎？", "ja": "在庫はありますか？", "romaji": "Zaiko wa arimasu ka?"}, {"cat": "購物", "zh": "可以免稅嗎？", "ja": "免税できますか？", "romaji": "Menzei dekimasu ka?"}, {"cat": "購物", "zh": "麻煩給我袋子", "ja": "袋をお願いします。", "romaji": "Fukuro o onegaishimasu."}, {"cat": "購物", "zh": "這是要送人的伴手禮", "ja": "お土産用です。", "romaji": "Omiyage-you desu."}, {"cat": "購物", "zh": "哪一個最受歡迎？", "ja": "人気の商品はどれですか？", "romaji": "Ninki no shouhin wa dore desu ka?"}, {"cat": "購物", "zh": "可以分開裝袋嗎？", "ja": "別々の袋に入れていただけますか？", "romaji": "Betsubetsu no fukuro ni irete itadakemasu ka?"}, {"cat": "問路", "zh": "請問要怎麼去？", "ja": "どうやって行けばいいですか？", "romaji": "Dou yatte ikeba ii desu ka?"}, {"cat": "問路", "zh": "可以走路到嗎？", "ja": "歩いて行けますか？", "romaji": "Aruite ikemasu ka?"}, {"cat": "問路", "zh": "從這裡大約幾分鐘？", "ja": "ここから何分くらいですか？", "romaji": "Koko kara nanpun kurai desu ka?"}, {"cat": "問路", "zh": "最近的車站在哪裡？", "ja": "一番近い駅はどこですか？", "romaji": "Ichiban chikai eki wa doko desu ka?"}, {"cat": "問路", "zh": "入口在哪裡？", "ja": "入り口はどこですか？", "romaji": "Iriguchi wa doko desu ka?"}, {"cat": "問路", "zh": "出口在哪裡？", "ja": "出口はどこですか？", "romaji": "Deguchi wa doko desu ka?"}, {"cat": "問路", "zh": "洗手間在哪裡？", "ja": "トイレはどこですか？", "romaji": "Toire wa doko desu ka?"}, {"cat": "問路", "zh": "可以幫我們拍照嗎？", "ja": "写真を撮っていただけますか？", "romaji": "Shashin o totte itadakemasu ka?"}, {"cat": "緊急", "zh": "我迷路了", "ja": "道に迷いました。", "romaji": "Michi ni mayoimashita."}, {"cat": "緊急", "zh": "請幫幫我", "ja": "助けてください。", "romaji": "Tasukete kudasai."}, {"cat": "緊急", "zh": "我的錢包不見了", "ja": "財布をなくしました。", "romaji": "Saifu o nakushimashita."}, {"cat": "緊急", "zh": "我的手機不見了", "ja": "携帯電話をなくしました。", "romaji": "Keitai denwa o nakushimashita."}, {"cat": "緊急", "zh": "我的護照不見了", "ja": "パスポートをなくしました。", "romaji": "Pasupooto o nakushimashita."}, {"cat": "緊急", "zh": "派出所在哪裡？", "ja": "交番はどこですか？", "romaji": "Kouban wa doko desu ka?"}, {"cat": "緊急", "zh": "醫院在哪裡？", "ja": "病院はどこですか？", "romaji": "Byouin wa doko desu ka?"}, {"cat": "緊急", "zh": "請幫我叫救護車", "ja": "救急車を呼んでください。", "romaji": "Kyuukyuusha o yonde kudasai."}, {"cat": "緊急", "zh": "我身體不舒服", "ja": "気分が悪いです。", "romaji": "Kibun ga warui desu."}, {"cat": "溝通", "zh": "請問會說中文嗎？", "ja": "中国語は話せますか？", "romaji": "Chuugokugo wa hanasemasu ka?"}, {"cat": "溝通", "zh": "請問會說英文嗎？", "ja": "英語は話せますか？", "romaji": "Eigo wa hanasemasu ka?"}, {"cat": "溝通", "zh": "可以使用翻譯 App 嗎？", "ja": "翻訳アプリを使ってもいいですか？", "romaji": "Honyaku apuri o tsukatte mo ii desu ka?"}];
+let phraseCat = '全部';
+
+function setupPhraseGuide(){
+  const cats=['全部',...Array.from(new Set(JAPANESE_PHRASES.map(x=>x.cat)))];
+  const box=document.getElementById('phraseCats');
+  if(!box)return;
+  box.innerHTML='';
+  cats.forEach(c=>{
+    const b=document.createElement('button');
+    b.textContent=c;
+    if(c===phraseCat)b.classList.add('active');
+    b.onclick=()=>{phraseCat=c;document.querySelectorAll('#phraseCats button').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderPhrases();};
+    box.appendChild(b);
+  });
+  const s=document.getElementById('phraseSearch');
+  if(s)s.addEventListener('input',renderPhrases);
+  renderPhrases();
+}
+function renderPhrases(){
+  const list=document.getElementById('phraseList'); if(!list)return;
+  const q=(document.getElementById('phraseSearch')?.value||'').trim().toLowerCase();
+  const arr=JAPANESE_PHRASES.filter(x=>(phraseCat==='全部'||x.cat===phraseCat)&&(!q||x.zh.toLowerCase().includes(q)||x.ja.toLowerCase().includes(q)||x.romaji.toLowerCase().includes(q)));
+  document.getElementById('phraseCount').textContent=`顯示 ${arr.length} / ${JAPANESE_PHRASES.length} 句`;
+  list.innerHTML='';
+  arr.forEach((x)=>{
+    const c=document.createElement('div'); c.className='phrase-card';
+    c.innerHTML=`<div class="label">${x.cat}</div><div class="phrase-zh">${escapeHtml(x.zh)}</div><div class="phrase-ja">${escapeHtml(x.ja)}</div><div class="phrase-romaji">${escapeHtml(x.romaji)}</div><div class="phrase-actions"><button onclick='speakJapanese(${JSON.stringify(x.ja)})'>🔊 播放日文</button><button class="showbig" onclick='showPhraseBig(${JSON.stringify(x.zh)},${JSON.stringify(x.ja)})'>🔎 放大給對方看</button></div>`;
     list.appendChild(c);
   });
 }

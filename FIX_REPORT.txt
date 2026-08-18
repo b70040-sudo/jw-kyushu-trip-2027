@@ -1,0 +1,18 @@
+Vercel 修正版檢查報告
+
+根本原因：
+上一版移除「回飯店」浮動按鈕時，HTML 結構被破壞，<script> 開頭消失，
+造成 JavaScript 原始碼直接顯示在頁面。
+
+本版處理：
+- 從結構正常版本重新建立
+- 安全移除黃色「回飯店」浮動按鈕
+- 保留完整 JavaScript
+- <script> 開/關標籤：1 / 1
+- 畫面外洩 JavaScript：0
+- 必要 JS 函式完整
+- 底部導覽：6 個
+- Vercel index.html / sw.js 設定 no-cache
+- 更新 Service Worker cache key
+
+移除的回飯店控制元件數：3

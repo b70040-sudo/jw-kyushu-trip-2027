@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hant"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/><meta content="#07101d" name="theme-color"/><link href="manifest.webmanifest" rel="manifest"/><title>JW 九州自由行 2027</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#07101d;color:#f7f9fc;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans TC",sans-serif}.app{max-width:650px;margin:auto;padding:18px 14px 105px}.page{display:none}.page.active{display:block}h1{margin:4px 0}.sub,.small{color:#a9bbd1;font-size:13px;line-height:1.55}.card{background:#102039;border:1px solid #294563;border-radius:20px;padding:15px;margin:10px 0}.hero{background:linear-gradient(135deg,#173b5e,#102039)}.label{font-size:11px;color:#a9bbd1}.big{font-size:24px;font-weight:950;margin:5px 0}.title{font-size:20px;font-weight:950;margin:22px 3px 9px}.btns{display:grid;grid-template-columns:1fr 1fr;gap:8px}.btn{display:flex;justify-content:center;align-items:center;text-decoration:none;border:0;border-radius:13px;padding:12px 8px;background:#eaf8ff;color:#08223d;font-weight:900}.alt{background:#183958;color:#fff}.gold{background:#ffe39a}.row{display:grid;grid-template-columns:65px 1fr;gap:10px;padding:12px 0;border-bottom:1px solid #294563}.row:last-child{border:0}.time{color:#7dd3fc;font-size:12px;font-weight:900}.check{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid #294563}.check:last-child{border:0}.check input{width:21px;height:21px;flex:none}.progress{height:9px;background:#081625;border-radius:99px;overflow:hidden;margin-top:8px}.bar{height:100%;background:#70e1b2;width:0}.progtext{font-size:12px;color:#a9bbd1;margin-top:6px}.tabs{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(650px,100%);display:grid;grid-template-columns:repeat(5,1fr);background:#06101df5;border-top:1px solid #294563;padding:6px 4px calc(6px + env(safe-area-inset-bottom));z-index:999}.tabs button{background:none;border:0;color:#a9bbd1;min-height:58px;font-weight:900;font-size:10px}.tabs button.active{color:#fff}.tabs span{display:block;font-size:20px}.kv{display:grid;grid-template-columns:100px 1fr;gap:8px;padding:8px 0;border-bottom:1px solid #294563}.k{color:#a9bbd1;font-size:12px}.v{font-size:13px;font-weight:800}details{background:#102039;border:1px solid #294563;border-radius:14px;padding:12px;margin:8px 0}summary{font-weight:900}.jp{font-size:18px;font-weight:850;line-height:1.6}textarea,input[type=text]{width:100%;background:#081625;color:#fff;border:1px solid #294563;border-radius:12px;padding:11px;font:inherit}.addrow{display:grid;grid-template-columns:1fr 72px;gap:7px}.del{margin-left:auto;background:#24364b;color:#b9c8da;border:0;border-radius:8px;padding:5px 8px}.sectiontabs{display:grid;grid-template-columns:1fr 1fr;gap:8px}.sectiontabs button{border:1px solid #294563;border-radius:12px;padding:10px;background:#102039;color:#fff;font-weight:900}.warn{border-left:4px solid #ffd166}
+
+.transportcard{margin:10px 0 18px;background:#0c1b2e;border:1px solid #31506f;border-radius:16px;padding:13px}
+.transportcard .head{font-size:15px;font-weight:950;margin-bottom:8px;color:#dff6ff}
+.transportcard .step{display:grid;grid-template-columns:28px 1fr;gap:8px;padding:7px 0;border-bottom:1px solid #243b55}
+.transportcard .step:last-child{border-bottom:0}
+.num{width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#173d5d;color:#bfeeff;font-size:11px;font-weight:900}
+.pending{display:inline-block;background:#3a2e14;color:#ffe49a;border-radius:8px;padding:3px 6px;font-size:10px;font-weight:900;margin-left:5px}
+
+.smartcard{background:linear-gradient(135deg,#162b49,#102039);border:1px solid #365878;border-radius:20px;padding:15px;margin:10px 0}
+.smartcard.tomorrow{border-left:5px solid #ffd166}
+.smartcard.todaynow{border-left:5px solid #70e1b2}
+.smartcard.hidden{display:none}
+.reminder-title{font-size:19px;font-weight:950;margin:4px 0}
+.reminder-meta{font-size:12px;color:#a9bbd1;line-height:1.55}
+.quick4{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.bigaction{min-height:72px;display:flex;flex-direction:column;gap:4px;align-items:flex-start;justify-content:center;padding:13px;border-radius:16px;background:#173a5b;border:1px solid #315574;color:#fff;text-decoration:none;font-weight:900}
+.bigaction strong{font-size:15px}.bigaction small{font-size:11px;color:#c3d3e4;font-weight:600}
+.countbox{background:linear-gradient(135deg,#1b4670,#132945);border:1px solid #3d6285;border-radius:22px;padding:17px;margin:10px 0}
+.day-reminder{margin-top:10px;padding:11px 12px;border-radius:14px;background:#0d1b2d;border:1px solid #2d4b68}
+.day-reminder b{display:block;margin-bottom:4px}
+
+
+/* mobile reminder layout fix */
+.row{align-items:start}
+.row > div{min-width:0}
+.day-reminder{
+  display:block !important;
+  width:100% !important;
+  max-width:none !important;
+  margin:12px 0 4px !important;
+  padding:12px 14px !important;
+  border-radius:14px !important;
+  background:#0d1b2d !important;
+  border:1px solid #2d4b68 !important;
+  font-size:13px !important;
+  line-height:1.65 !important;
+  overflow-wrap:anywhere;
+  word-break:normal;
+}
+.day-reminder b{display:block;font-size:14px;line-height:1.6}
+.card > .day-reminder{clear:both}
+@media(max-width:430px){
+  .row{grid-template-columns:62px minmax(0,1fr)}
+  .day-reminder{font-size:12px !important}
+}
+
+
+.route-image-card{background:#0d1b2d;border:1px solid #31506f;border-radius:16px;padding:12px;margin:12px 0}
+.route-image-card img{width:100%;height:auto;border-radius:12px;display:block;border:1px solid #294563}
+.route-image-card .caption{font-size:12px;color:#a9bbd1;line-height:1.5;margin-top:8px}
+.image-modal{position:fixed;inset:0;background:rgba(0,0,0,.94);z-index:10050;display:none;align-items:center;justify-content:center;padding:14px}
+.image-modal.open{display:flex}
+.image-modal img{max-width:100%;max-height:92vh;object-fit:contain;border-radius:10px}
+.image-modal .close{position:absolute;top:16px;right:16px;width:44px;height:44px;border:0;border-radius:50%;background:white;color:#111;font-size:24px;font-weight:900}
+
+.daily-photo-card{margin:12px 0 14px}
+.daily-photo-card img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:14px;border:1px solid #294563;display:block}
+.daily-photo-card .photo-caption{font-size:11px;color:#a9bbd1;margin-top:6px;line-height:1.4}
+
+
+.phrase-search{position:sticky;top:0;background:#07101df2;backdrop-filter:blur(12px);z-index:20;padding:8px 0}
+.phrase-cats{display:flex;gap:6px;overflow-x:auto;padding:8px 0 4px;scrollbar-width:none}.phrase-cats::-webkit-scrollbar{display:none}
+.phrase-cats button{flex:0 0 auto;border:1px solid #31506f;border-radius:999px;background:#102039;color:#dcecff;padding:7px 10px;font-size:11px;font-weight:850}
+.phrase-cats button.active{background:#eaf8ff;color:#08223d}
+.phrase-card{background:#102039;border:1px solid #294563;border-radius:16px;padding:12px;margin:9px 0}
+.phrase-zh{font-size:14px;font-weight:900;margin-bottom:6px}.phrase-ja{font-size:20px;font-weight:950;line-height:1.5}.phrase-romaji{font-size:11px;color:#91a8bf;margin-top:4px}
+.phrase-actions{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:9px}.phrase-actions button{border:0;border-radius:11px;padding:9px;background:#173958;color:#fff;font-weight:850}
+.phrase-actions .showbig{background:#ffe39a;color:#2a2108}
+.phrase-modal{position:fixed;inset:0;background:#02060b;z-index:11000;display:none;align-items:center;justify-content:center;padding:24px}.phrase-modal.open{display:flex}
+.phrase-modal-inner{text-align:center;max-width:900px}.phrase-modal-zh{font-size:18px;color:#a9bbd1;margin-bottom:22px}.phrase-modal-ja{font-size:clamp(34px,9vw,76px);font-weight:950;line-height:1.35}
+.phrase-close{position:absolute;right:16px;top:calc(16px + env(safe-area-inset-top));width:46px;height:46px;border-radius:50%;border:0;background:#fff;color:#111;font-size:24px;font-weight:900}
+.route-detail-card{margin:12px 0}.route-detail-card img{width:100%;height:auto;border-radius:14px;border:1px solid #294563;display:block}
+
+/* ===== Premium UI Refresh ===== */
+:root{
+  --bg:#07101b;
+  --bg2:#0a1728;
+  --card:#0f2036;
+  --card2:#163251;
+  --card3:#102943;
+  --line:#2b4b69;
+  --text:#f7faff;
+  --muted:#9fb4ca;
+  --sky:#81d4ff;
+  --blue:#4aa8ff;
+  --gold:#ffd77a;
+  --green:#70e3b2;
+}
+body{
+  background:
+    radial-gradient(circle at 85% -10%,rgba(36,88,142,.35),transparent 32%),
+    radial-gradient(circle at -10% 35%,rgba(24,70,117,.25),transparent 28%),
+    linear-gradient(180deg,var(--bg),var(--bg2) 45%,var(--bg));
+}
+.app{padding-left:16px;padding-right:16px}
+header{padding:16px 4px 10px}
+header .eyebrow,.eyebrow{font-size:11px;letter-spacing:.18em;color:#9eb9d4}
+h1{font-size:34px;letter-spacing:-.03em;margin:7px 0 6px}
+.sub{font-size:13px;color:#9fb4ca}
+
+.card,.smartcard,.countbox,.transportcard,.route-image-card,.phrase-card{
+  background:linear-gradient(145deg,rgba(24,52,84,.96),rgba(13,29,49,.98));
+  border:1px solid rgba(82,126,166,.42);
+  box-shadow:0 16px 38px rgba(0,0,0,.22), inset 0 1px rgba(255,255,255,.02);
+}
+.card,.smartcard,.countbox{border-radius:24px}
+.transportcard,.route-image-card{border-radius:18px}
+.countbox{
+  position:relative;
+  overflow:hidden;
+  padding:18px;
+  background:
+    radial-gradient(circle at 84% 20%,rgba(72,154,224,.28),transparent 28%),
+    linear-gradient(135deg,#1c4771,#122944 72%);
+}
+.countbox:after{
+  content:"✈️";
+  position:absolute;
+  right:22px;
+  top:22px;
+  font-size:44px;
+  opacity:.16;
+  transform:rotate(-12deg);
+}
+.countbox .big{font-size:31px;letter-spacing:-.03em}
+.label{font-size:11px;text-transform:none;letter-spacing:.04em;color:#9fb4ca}
+.big{font-size:23px}.value{font-size:17px}
+.title{font-size:21px;margin:26px 2px 11px}
+
+.quick4{gap:10px}
+.bigaction{
+  border-radius:18px;
+  min-height:82px;
+  padding:15px;
+  background:linear-gradient(145deg,#1a466d,#143453);
+  border:1px solid #356186;
+  box-shadow:inset 0 1px rgba(255,255,255,.04);
+  transition:.16s transform,.16s filter;
+}
+.bigaction:active,.btn:active{transform:scale(.985);filter:brightness(.95)}
+.bigaction strong{font-size:16px}
+.bigaction small{font-size:11px;color:#b9ccde}
+
+.btn{
+  min-height:46px;
+  border-radius:14px;
+  background:linear-gradient(145deg,#eaf8ff,#cdeeff);
+  box-shadow:0 5px 15px rgba(0,0,0,.16);
+}
+.btn.alt{
+  background:linear-gradient(145deg,#21496e,#173958);
+  border:1px solid #396485;
+}
+.btn.gold{
+  background:linear-gradient(145deg,#ffe8a7,#ffd773);
+  color:#2b2106;
+}
+.btns{gap:9px}
+
+.row{
+  grid-template-columns:66px minmax(0,1fr);
+  padding:14px 0;
+}
+.time{
+  color:#8ad8ff;
+  font-size:12px;
+  letter-spacing:.02em;
+}
+.row b{font-size:15px}
+.small{font-size:12px;line-height:1.6}
+
+.day-reminder{
+  background:linear-gradient(145deg,#0d2035,#0a1a2a)!important;
+  border:1px solid #315576!important;
+  border-left:4px solid var(--gold)!important;
+  padding:13px 14px!important;
+}
+.day-reminder b{font-size:14px}
+
+.daily-photo-card img,.route-image-card img,.route-detail-card img{
+  border-radius:16px;
+  box-shadow:0 10px 26px rgba(0,0,0,.25);
+}
+.photo-caption,.caption{padding-left:2px}
+
+.kv{padding:9px 0}
+.k{font-size:11px}
+.v{font-size:13px}
+
+.check{
+  padding:11px 0;
+}
+.check input{
+  width:22px;
+  height:22px;
+  accent-color:#67dca9;
+}
+.progress{
+  height:10px;
+  background:#0a1625;
+}
+.bar{background:linear-gradient(90deg,#62d9a5,#8ee7c2)}
+
+.phrase-search{
+  top:0;
+  margin:0 -2px;
+  padding:10px 2px 8px;
+  background:rgba(7,16,27,.9);
+  -webkit-backdrop-filter:blur(16px);
+  backdrop-filter:blur(16px);
+}
+.phrase-search input{
+  min-height:48px;
+  border-radius:15px;
+  padding:12px 14px;
+  background:#0d1e32;
+}
+.phrase-cats button{
+  background:#122943;
+  border-color:#31516e;
+  padding:8px 12px;
+}
+.phrase-card{
+  border-radius:18px;
+  padding:14px;
+}
+.phrase-ja{font-size:22px}
+.phrase-actions button{
+  min-height:44px;
+  border-radius:12px;
+}
+
+.tabs{
+  background:rgba(4,11,20,.93);
+  -webkit-backdrop-filter:blur(18px);
+  backdrop-filter:blur(18px);
+  border-top:1px solid rgba(89,128,164,.4);
+  padding-top:7px;
+}
+.tabs button{
+  border-radius:12px;
+  min-height:60px;
+  transition:.15s;
+}
+.tabs button.active{
+  color:#fff;
+  background:linear-gradient(180deg,rgba(43,93,136,.35),rgba(16,44,70,.18));
+}
+.tabs span{font-size:21px}
+
+
+
+details{
+  border-radius:16px;
+  background:linear-gradient(145deg,#11263f,#0d1e32);
+}
+summary{padding:2px 0}
+
+@media(max-width:430px){
+  h1{font-size:32px}
+  .countbox .big{font-size:28px}
+  .quick4{grid-template-columns:1fr 1fr}
+  .bigaction{min-height:78px}
+}
+
+
+/* ===== Collapsible itinerary ===== */
+.day-accordion{
+  margin:12px 0;
+  border:1px solid rgba(82,126,166,.45);
+  border-radius:20px;
+  overflow:hidden;
+  background:linear-gradient(145deg,#132c48,#0d1e32);
+  box-shadow:0 14px 32px rgba(0,0,0,.20);
+}
+.day-accordion-summary{
+  list-style:none;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:15px 16px;
+  min-height:78px;
+  -webkit-tap-highlight-color:transparent;
+}
+.day-accordion-summary::-webkit-details-marker{display:none}
+.day-accordion-left{min-width:0;flex:1}
+.day-accordion-top{display:flex;align-items:center;gap:8px;margin-bottom:5px}
+.day-badge{
+  display:inline-flex;
+  align-items:center;
+  padding:4px 8px;
+  border-radius:8px;
+  background:#245e91;
+  color:#fff;
+  font-size:11px;
+  font-weight:950;
+}
+.day-date{font-size:12px;color:#9fb4ca;font-weight:800}
+.day-accordion-title{
+  font-size:16px;
+  font-weight:950;
+  color:#f7faff;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.day-chevron{
+  flex:none;
+  width:34px;height:34px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#173958;
+  color:#dff4ff;
+  font-size:22px;
+  transition:transform .2s ease;
+}
+.day-accordion[open] .day-chevron{transform:rotate(180deg)}
+.day-accordion[open] .day-accordion-summary{
+  background:linear-gradient(180deg,rgba(51,101,145,.20),rgba(18,46,74,.08));
+  border-bottom:1px solid rgba(82,126,166,.30);
+}
+.day-accordion-body{padding:0 12px 14px}
+.day-accordion-body > .card,
+.day-accordion-body > .route-image-card{
+  margin:12px 0 0;
+  box-shadow:none;
+}
+@media(max-width:430px){
+  .day-accordion-summary{padding:14px;min-height:74px}
+  .day-accordion-title{font-size:15px}
+}
+
+/* iPhone/PWA: allow the final Japanese phrase to scroll fully above fixed navigation */
+:root{--app-safe-bottom:calc(105px + env(safe-area-inset-bottom,0px))}
+html,body{min-height:100%;overscroll-behavior-y:none}
+body{min-height:100dvh;padding-bottom:var(--app-safe-bottom)}
+.page{padding-bottom:calc(var(--app-safe-bottom) + 36px)!important}
+#japanese{padding-bottom:calc(var(--app-safe-bottom) + 100px)!important}
+#phraseList{padding-bottom:90px}
+#phraseList>*:last-child{margin-bottom:70px!important}
+.tabs{padding-bottom:max(10px,env(safe-area-inset-bottom,0px));height:auto;min-height:78px}
+
+
+/* ===== Travel utility + offline enhancements ===== */
+.alert-center{margin:12px 0}
+.alert-card{border-radius:18px;padding:14px;margin:9px 0;border:1px solid #355a78;background:linear-gradient(145deg,#122a45,#0c1b2d)}
+.alert-card.high{border-left:5px solid #ff7d8d}
+.alert-card.mid{border-left:5px solid #ffd166}
+.alert-card.low{border-left:5px solid #70e1b2}
+.alert-title{font-size:15px;font-weight:950;margin-bottom:5px}
+.alert-text{font-size:12px;color:#b6c9db;line-height:1.6}
+.offline-badge{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:6px 9px;font-size:11px;font-weight:900;background:#102b44;border:1px solid #315b7c}
+.offline-badge.ok{color:#88edc2}.offline-badge.no{color:#ffd166}
+.converter-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.converter-result{font-size:28px;font-weight:950;margin:8px 0}
+.quick-yen{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:9px}
+.quick-yen button{border:1px solid #31506f;background:#122943;color:white;border-radius:11px;padding:9px 3px;font-weight:850;font-size:11px}
+.offline-place{padding:11px 0;border-bottom:1px solid #294563}.offline-place:last-child{border-bottom:0}
+.offline-place .name{font-weight:900}.offline-place .addr{font-size:12px;color:#a9bbd1;margin:4px 0 8px;line-height:1.45}
+.copybtn{border:0;border-radius:10px;padding:8px 10px;background:#173958;color:white;font-weight:850}
+.online-only{opacity:.92}
+.offline-only-note{display:none;font-size:11px;color:#ffd166;margin-top:6px}
+body.offline .online-only{opacity:.46;filter:grayscale(.25)}
+body.offline .offline-only-note{display:block}
+
+
+/* auto-expand travel checklists */
+.checklist-accordion{
+  margin:12px 0;
+  border:1px solid rgba(82,126,166,.45);
+  border-radius:20px;
+  overflow:hidden;
+  background:linear-gradient(145deg,#132c48,#0d1e32);
+}
+.checklist-accordion summary{
+  list-style:none;
+  cursor:pointer;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  padding:15px 16px;
+  min-height:72px;
+  -webkit-tap-highlight-color:transparent;
+}
+.checklist-accordion summary::-webkit-details-marker{display:none}
+.checklist-title{font-size:16px;font-weight:950}
+.checklist-sub{font-size:11px;color:#9fb4ca;margin-top:4px}
+.checklist-chevron{
+  width:34px;height:34px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  flex:none;background:#173958;color:#dff4ff;font-size:22px;
+  transition:transform .2s ease;
+}
+.checklist-accordion[open] .checklist-chevron{transform:rotate(180deg)}
+.checklist-accordion[open] summary{border-bottom:1px solid rgba(82,126,166,.3)}
+.checklist-body{padding:0 15px 12px}
+.checklist-done summary{background:linear-gradient(145deg,rgba(34,103,78,.28),rgba(13,29,49,.96))}
+.checklist-done .checklist-sub{color:#83e8bc}
+
+
+/* Fukuoka must eat/buy/browse recommendations */
+.reco-wrap{margin-top:18px}
+.reco-accordion{
+  margin:10px 0;
+  border:1px solid rgba(82,126,166,.45);
+  border-radius:20px;
+  overflow:hidden;
+  background:linear-gradient(145deg,#132c48,#0d1e32);
+}
+.reco-accordion summary{
+  list-style:none;cursor:pointer;padding:15px 16px;display:flex;
+  justify-content:space-between;align-items:center;gap:10px
+}
+.reco-accordion summary::-webkit-details-marker{display:none}
+.reco-head{font-weight:950;font-size:16px}
+.reco-sub{font-size:11px;color:#9fb4ca;margin-top:4px}
+.reco-chevron{width:34px;height:34px;border-radius:50%;background:#173958;color:#dff4ff;display:flex;align-items:center;justify-content:center;font-size:22px;transition:.2s}
+.reco-accordion[open] .reco-chevron{transform:rotate(180deg)}
+.reco-body{padding:0 14px 12px}
+.reco-item{padding:12px 0;border-bottom:1px solid #294563}
+.reco-item:last-child{border-bottom:0}
+.reco-top{display:grid;grid-template-columns:28px 22px minmax(0,1fr);gap:8px;align-items:start}
+.reco-rank{font-size:11px;font-weight:950;color:#ffd77a;padding-top:3px}
+.reco-item input{width:20px;height:20px;accent-color:#70e1b2}
+.reco-name{font-size:14px;font-weight:950}
+.reco-desc{font-size:12px;color:#b4c5d5;line-height:1.55;margin-top:3px}
+.reco-location{font-size:11px;color:#91a8bf;line-height:1.5;margin-top:5px}
+.reco-actions{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin:9px 0 0 58px}
+.reco-actions a,.reco-actions button{border:0;border-radius:10px;padding:9px;background:#173958;color:#fff;text-decoration:none;text-align:center;font-size:11px;font-weight:850}
+
+
+/* Homepage live weather */
+.weather-home{margin:12px 0}
+.weather-main{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.weather-temp{font-size:34px;font-weight:950;line-height:1}
+.weather-desc{font-size:13px;font-weight:900;margin-top:5px}
+.weather-meta{font-size:11px;color:#9fb4ca;margin-top:5px}
+.umbrella-box{margin-top:12px;border-radius:15px;padding:12px;background:#102943;border:1px solid #315b7c}
+.umbrella-title{font-size:15px;font-weight:950}
+.umbrella-note{font-size:11px;color:#b8c9d9;line-height:1.55;margin-top:4px}
+.weather-mini{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:10px}
+.weather-mini>div{background:#0c1e31;border-radius:12px;padding:9px;text-align:center}
+.weather-mini b{display:block;font-size:14px}.weather-mini span{font-size:10px;color:#9fb4ca}
+
+.buyeat-fab{position:fixed;right:16px;bottom:86px;z-index:50;border:0;border-radius:18px;padding:12px 15px;font-weight:900;background:#173958;color:#fff}
+/* ===== Final 6-tab bottom navigation ===== */
+.tabs{
+  display:grid !important;
+  grid-template-columns:repeat(6,minmax(0,1fr)) !important;
+  gap:2px !important;
+  padding:7px 6px max(8px, env(safe-area-inset-bottom,0px)) !important;
+  min-height:78px !important;
+}
+.tabs button{
+  min-width:0 !important;
+  width:100% !important;
+  min-height:58px !important;
+  padding:5px 2px !important;
+  border-radius:14px !important;
+  font-size:11px !important;
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:2px !important;
+}
+.tabs button span{
+  font-size:20px !important;
+  line-height:1 !important;
+}
+.tabs button[data-p="wishlist"]{
+  color:#ffe08a !important;
+}
+.tabs button[data-p="wishlist"].active{
+  background:linear-gradient(180deg,rgba(91,126,166,.38),rgba(20,53,84,.32)) !important;
+}
+/* Hide obsolete floating quick button on 收藏 page and avoid overlap everywhere */
+.buyeat-fab,.wishlist-fab{display:none !important}
+
+/* 收藏頁 spacing */
+#wishlist{
+  padding-bottom:calc(120px + env(safe-area-inset-bottom,0px)) !important;
+}
+#wishlist .title{margin-top:22px}
+#wishlist .card{margin-bottom:14px}
+#wishlist textarea{
+  min-height:170px !important;
+  resize:vertical;
+}
+@media(max-width:430px){
+  .tabs button{font-size:10px !important}
+  .tabs button span{font-size:19px !important}
+}
+
+</style></head><body>
+<!-- APP RULE STRICT:
+想買、想吃、旅行備忘唯一完整內容固定於 #wishlist 收藏頁。
+今日、行程、完成、清單、更多、日文頁皆不得重複產生上述欄位或快捷副本。
+底部導覽固定六等分：今日、行程、完成、清單、更多、收藏。
+-->
+
+<div class="app"><div class="label">JW · KYUSHU 2027</div><h1>九州旅行🇯🇵</h1><div class="sub">2027/3/25～3/31｜7天6夜｜博多連住</div>
+<section class="page active" id="today">
+<div class="card weather-home">
+<div class="weather-main">
+<div>
+<div class="label">FUKUOKA WEATHER</div>
+<div class="big">福岡即時天氣 ☁️</div>
+<div class="weather-meta" id="weatherUpdated">正在取得最新天氣…</div>
+</div>
+<div style="text-align:right">
+<div class="weather-temp" id="weatherTemp">--°</div>
+<div class="weather-desc" id="weatherDesc">讀取中</div>
+</div>
+</div>
+<div class="weather-mini">
+<div><b id="weatherRain">--%</b><span>降雨機率</span></div>
+<div><b id="weatherHigh">--°</b><span>最高溫</span></div>
+<div><b id="weatherLow">--°</b><span>最低溫</span></div>
+</div>
+<div class="umbrella-box" id="umbrellaBox">
+<div class="umbrella-title" id="umbrellaTitle">☂️ 雨具判斷中</div>
+<div class="umbrella-note" id="umbrellaNote">依今日降雨機率與降雨量自動提供建議。</div>
+</div>
+<div class="offline-only-note">📴 目前離線：顯示上一次成功取得的天氣資料。</div>
+</div>
+<div class="countbox">
+<div class="label">距離出發 ✈️</div>
+<div class="big" id="count">計算中…</div>
+<div class="small">2027/3/25 出發｜BR120｜博多連住</div>
+</div>
+<div class="smartcard hidden" id="smartReminder">
+<div class="label" id="reminderLabel">行程提醒</div>
+<div class="reminder-title" id="reminderTitle"></div>
+<div class="reminder-meta" id="reminderText"></div>
+<div class="btns" style="margin-top:10px">
+</div>
+</div>
+<div class="card">
+<div class="label">一鍵工具</div>
+<div class="btns">
+
+
+<a class="btn online-only" href="https://www.google.com/maps/search/?api=1&amp;query=Hakata+Station">🚉 博多站</a>
+<a class="btn online-only" href="https://translate.google.com/?sl=zh-TW&amp;tl=ja&amp;op=translate">🌐 Google 翻譯</a>
+<button class="showbig" onclick='showPhraseBig(${JSON.stringify(x.zh)},${JSON.stringify(x.ja)})'>🔎 放大給對方看</button></div>`;
+    list.appendChild(c);
+  });
+}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));}
+function speakJapanese(text){
+  if(!('speechSynthesis' in window)){alert('這台裝置目前不支援語音播放');return;}
+  speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(text); u.lang='ja-JP'; u.rate=0.85; speechSynthesis.speak(u);
+}
+function showPhraseBig(zh,ja){
+  document.getElementById('phraseModalZh').textContent=zh;
+  document.getElementById('phraseModalJa').textContent=ja;
+  document.getElementById('phraseModal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closePhraseModal(){
+  document.getElementById('phraseModal').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+if(document.readyState === 'loading'){
+  document.addEventListener('DOMContentLoaded', setupPhraseGuide);
+}else{
+  setupPhraseGuide();
+}
+
+
+
+function autoOpenTodayAccordion(){
+  const map={
+    '2027-03-25':'1','2027-03-26':'2','2027-03-27':'3',
+    '2027-03-28':'4','2027-03-29':'5','2027-03-30':'6','2027-03-31':'7'
+  };
+  try{
+    const parts=new Intl.DateTimeFormat('en-CA',{
+      timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit'
+    }).format(new Date());
+    const d=map[parts];
+    if(d){
+      const el=document.querySelector('.day-accordion[data-day="'+d+'"]');
+      if(el) el.open=true;
+    }
+  }catch(e){}
+}
+document.addEventListener('DOMContentLoaded',autoOpenTodayAccordion);
+
+const TRIP_ALERTS = {
+ '2027-03-25':[
+  ['high','✈️ 今日出發','12:10 小港機場接送；BR120 15:30。護照、手機、eSIM、行李再次確認。'],
+  ['low','🏨 抵達福岡後','先入住飯店，再安排博多站周邊晚餐與散步。']
+ ],
+ '2027-03-26':[
+  ['high','🎆 豪斯登堡日','提早抵達博多站，確認特急、月台與指定席。'],
+  ['high','🚆 煙火後回程','煙火結束後優先往豪斯登堡站移動；正式車次公布後再更新。']
+ ],
+ '2027-03-27':[
+  ['mid','🌸 賞櫻＋太宰府','上午舞鶴公園；下午往太宰府前確認西鐵轉乘。']
+ ],
+ '2027-03-28':[
+  ['high','🌿 由布院','前一晚確認 JR 車次與指定席；回程班次也先記好。']
+ ],
+ '2027-03-29':[
+  ['high','🌅 糸島夫婦岩＋夕陽','今天最重要：出發前再次確認二見浦回程巴士末班時間。'],
+  ['mid','📸 夕陽拍攝','建議提早抵達海邊，夕陽後不要停留太久。']
+ ],
+ '2027-03-30':[
+  ['low','🛍️ 博多休閒日','集中吃吃、買伴手禮；晚上回飯店整理行李與確認重量。']
+ ],
+ '2027-03-31':[
+  ['high','✈️ 回程日','退房前完成回程清單；預留充裕時間前往福岡機場國際線。']
+ ]
+};
+function tokyoDate(){
+  try{return new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());}
+  catch(e){return new Date().toISOString().slice(0,10)}
+}
+function renderAlerts(){
+  const box=document.getElementById('alertCenter'); if(!box)return;
+  const key=tokyoDate(), arr=TRIP_ALERTS[key]||[];
+  if(arr.length===0){
+    box.innerHTML='<div class="alert-card low"><div class="alert-title">✅ 目前沒有當日警示</div><div class="alert-text">旅程開始前，這裡會在前一天／當天顯示真正需要注意的資訊。</div></div>';
+    return;
+  }
+  box.innerHTML=arr.map(a=>`<div class="alert-card ${a[0]}"><div class="alert-title">${a[1]}</div><div class="alert-text">${a[2]}</div></div>`).join('');
+}
+function updateNetState(){
+  const online=navigator.onLine;
+  document.body.classList.toggle('offline',!online);
+  const b=document.getElementById('offlineBadge');
+  if(b){b.textContent=online?'● 線上':'● 離線模式';b.className='offline-badge '+(online?'ok':'no');}
+}
+function calcYen(){
+  const y=parseFloat(document.getElementById('yenInput')?.value||0);
+  const r=parseFloat(document.getElementById('rateInput')?.value||0);
+  const el=document.getElementById('yenResult'); if(el)el.textContent='約 NT$ '+Math.round(y*r).toLocaleString('zh-TW');
+}
+function setYen(v){const e=document.getElementById('yenInput');if(e){e.value=v;calcYen();}}
+function saveRate(){const e=document.getElementById('rateInput');if(e)localStorage.setItem('jw_yen_rate',e.value);}
+function loadRate(){const e=document.getElementById('rateInput');if(e){const r=localStorage.getItem('jw_yen_rate');if(r)e.value=r;calcYen();}}
+async function copyText(t){
+  try{await navigator.clipboard.writeText(t);alert('已複製');}
+  catch(e){prompt('請複製以下內容：',t);}
+}
+document.addEventListener('DOMContentLoaded',()=>{renderAlerts();updateNetState();loadRate();});
+addEventListener('online',updateNetState);addEventListener('offline',updateNetState);
+
+
+function localDateKey(){
+  const d=new Date();
+  const y=d.getFullYear();
+  const m=String(d.getMonth()+1).padStart(2,'0');
+  const day=String(d.getDate()).padStart(2,'0');
+  return `${y}-${m}-${day}`;
+}
+function allChecked(selector){
+  const a=[...document.querySelectorAll(selector)];
+  return a.length>0 && a.every(x=>x.checked);
+}
+function checkedCount(selector){
+  const a=[...document.querySelectorAll(selector)];
+  return [a.filter(x=>x.checked).length,a.length];
+}
+function updateTravelChecklists(){
+  const now=localDateKey();
+  const departBox=document.getElementById('departChecklist');
+  const returnBox=document.getElementById('returnChecklist');
+  const departDone=allChecked('#depart input');
+  const returnDone=allChecked('#return input');
+  const [dc,dt]=checkedCount('#depart input');
+  const [rc,rt]=checkedCount('#return input');
+  const ds=document.getElementById('departStatus');
+  const rs=document.getElementById('returnStatus');
+
+  if(ds) ds.textContent=departDone ? `✅ 已確認 ${dc}/${dt}` : `${dc}/${dt} 已確認｜3/18 起自動展開`;
+  if(rs) rs.textContent=returnDone ? `✅ 已確認 ${rc}/${rt}` : `${rc}/${rt} 已確認｜3/30 起自動展開`;
+
+  if(departBox){
+    departBox.classList.toggle('checklist-done',departDone);
+    if(departDone){
+      departBox.open=false;
+      localStorage.setItem('jw_depart_completed','1');
+    }else if(now>='2027-03-18' && now<='2027-03-25'){
+      departBox.open=true;
+    }
+  }
+
+  if(returnBox){
+    returnBox.classList.toggle('checklist-done',returnDone);
+    if(returnDone){
+      returnBox.open=false;
+      localStorage.setItem('jw_return_completed','1');
+    }else if(now>='2027-03-30' && now<='2027-03-31'){
+      returnBox.open=true;
+    }
+  }
+}
+document.addEventListener('DOMContentLoaded',updateTravelChecklists);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)updateTravelChecklists()});
+
+
+function initFukuokaReco(){
+  document.querySelectorAll('.fukuoka-reco-check').forEach(c=>{
+    const k='jw_'+c.dataset.key;
+    c.checked=localStorage.getItem(k)==='1';
+    c.addEventListener('change',()=>localStorage.setItem(k,c.checked?'1':'0'));
+  });
+}
+document.addEventListener('DOMContentLoaded',initFukuokaReco);
+
+
+function weatherCodeText(c){
+ const m={0:'晴朗',1:'大致晴朗',2:'局部多雲',3:'陰天',45:'有霧',48:'霧凇',
+ 51:'毛毛雨',53:'毛毛雨',55:'較強毛毛雨',61:'小雨',63:'中雨',65:'大雨',
+ 71:'小雪',73:'中雪',75:'大雪',80:'陣雨',81:'陣雨',82:'強陣雨',95:'雷雨',96:'雷雨',99:'強雷雨'};
+ return m[c]||'天氣變化';
+}
+function renderWeather(w,offline=false){
+ const $=id=>document.getElementById(id);
+ if($('weatherTemp')) $('weatherTemp').textContent=Math.round(w.temp)+'°';
+ if($('weatherDesc')) $('weatherDesc').textContent=weatherCodeText(w.code);
+ if($('weatherRain')) $('weatherRain').textContent=Math.round(w.rainProb)+'%';
+ if($('weatherHigh')) $('weatherHigh').textContent=Math.round(w.high)+'°';
+ if($('weatherLow')) $('weatherLow').textContent=Math.round(w.low)+'°';
+ if($('weatherUpdated')) $('weatherUpdated').textContent=(offline?'離線快取｜':'更新｜')+w.updated;
+ let title,note;
+ if(w.rainProb>=70 || w.precip>=3){title='🌧️ 建議一定攜帶雨具';note='今天降雨風險高，建議折傘＋輕便防水外套。';}
+ else if(w.rainProb>=40 || w.precip>0){title='☂️ 建議攜帶折疊傘';note='有降雨可能，帶一把輕量折疊傘比較安心。';}
+ else if(w.rainProb>=20){title='🌂 可帶輕量折疊傘';note='降雨機率不高，但長時間在外可帶小傘備用。';}
+ else {title='☀️ 今天可不特別帶雨具';note='目前預報降雨風險低；出門前仍可再確認一次。';}
+ if($('umbrellaTitle')) $('umbrellaTitle').textContent=title;
+ if($('umbrellaNote')) $('umbrellaNote').textContent=note;
+}
+async function loadFukuokaWeather(){
+ const cached=localStorage.getItem('jw_fukuoka_weather');
+ if(!navigator.onLine && cached){try{return renderWeather(JSON.parse(cached),true)}catch(e){}}
+ try{
+  const url='https://api.open-meteo.com/v1/forecast?latitude=33.5902&longitude=130.4017&current=temperature_2m,weather_code&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,precipitation_sum&timezone=Asia%2FTokyo&forecast_days=1';
+  const r=await fetch(url,{cache:'no-store'}); if(!r.ok)throw new Error('weather');
+  const d=await r.json();
+  const w={temp:d.current.temperature_2m,code:d.current.weather_code,
+   high:d.daily.temperature_2m_max[0],low:d.daily.temperature_2m_min[0],
+   rainProb:d.daily.precipitation_probability_max[0]??0,precip:d.daily.precipitation_sum[0]??0,
+   updated:new Date().toLocaleString('zh-TW',{timeZone:'Asia/Tokyo',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'})};
+  localStorage.setItem('jw_fukuoka_weather',JSON.stringify(w)); renderWeather(w,false);
+ }catch(e){
+  if(cached){try{return renderWeather(JSON.parse(cached),true)}catch(x){}}
+  const u=document.getElementById('weatherUpdated'); if(u)u.textContent='目前無法取得天氣';
+  const t=document.getElementById('umbrellaTitle'); if(t)t.textContent='🌂 建議先帶折疊傘備用';
+ }
+}
+document.addEventListener('DOMContentLoaded',loadFukuokaWeather);
+addEventListener('online',loadFukuokaWeather);
+
+</script></body></html>

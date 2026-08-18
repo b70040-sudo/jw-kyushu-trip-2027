@@ -1,0 +1,27 @@
+JW 九州旅行 APP 離線測試報告
+========================================
+總體結果：PASS ✅
+
+- index.html: PASS
+- manifest.webmanifest: PASS
+- icon.svg: PASS
+- vercel.json: PASS
+- 全行程路線圖: PASS
+- Day2 豪斯登堡交通圖: PASS
+- Day3 交通圖: PASS
+- Day4 交通圖: PASS
+- Day5 交通圖: PASS
+- Day6 交通圖: PASS
+- 旅行日文資料: PASS
+- 日文播放/放大: PASS
+- 日幣換算器: PASS
+- 今日警示中心: PASS
+- 離線狀態: PASS
+- 旅行備忘: PASS
+- 勾選清單: PASS
+
+預快取資產：18 個
+遺失資產：無
+
+斷網可用：行程、旅行日文、搜尋/放大、裝置內語音播放（依系統語音支援）、清單、備忘、日幣換算、照片、交通攻略圖、離線地址卡、今日警示。
+需網路：Google Maps 即時導航、Google 翻譯網站、即時天氣/匯率、JR 官網。

@@ -1,0 +1,6 @@
+修正 iPhone 上方白色安全區：
+- viewport-fit=cover
+- apple-mobile-web-app-status-bar-style=black-translucent
+- theme/background 色統一為 #071522
+- 上方安全區與 APP 深色背景一致
+- 保留 Day1~Day7 最終行程、住宿兩行、六顆底部導覽與既有功能

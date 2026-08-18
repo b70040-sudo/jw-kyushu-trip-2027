@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
-<html lang="zh-Hant"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/><meta content="#07101d" name="theme-color"/><link href="manifest.webmanifest" rel="manifest"/><title>JW 九州自由行 2027</title>
+<html lang="zh-Hant"><head>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/><meta content="#07101d" name="theme-color"/><link href="manifest.webmanifest" rel="manifest"/><title>JW 九州自由行 2027</title>
 <style>
 *{box-sizing:border-box}body{margin:0;background:#07101d;color:#f7f9fc;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans TC",sans-serif}.app{max-width:650px;margin:auto;padding:18px 14px 105px}.page{display:none}.page.active{display:block}h1{margin:4px 0}.sub,.small{color:#a9bbd1;font-size:13px;line-height:1.55}.card{background:#102039;border:1px solid #294563;border-radius:20px;padding:15px;margin:10px 0}.hero{background:linear-gradient(135deg,#173b5e,#102039)}.label{font-size:11px;color:#a9bbd1}.big{font-size:24px;font-weight:950;margin:5px 0}.title{font-size:20px;font-weight:950;margin:22px 3px 9px}.btns{display:grid;grid-template-columns:1fr 1fr;gap:8px}.btn{display:flex;justify-content:center;align-items:center;text-decoration:none;border:0;border-radius:13px;padding:12px 8px;background:#eaf8ff;color:#08223d;font-weight:900}.alt{background:#183958;color:#fff}.gold{background:#ffe39a}.row{display:grid;grid-template-columns:65px 1fr;gap:10px;padding:12px 0;border-bottom:1px solid #294563}.row:last-child{border:0}.time{color:#7dd3fc;font-size:12px;font-weight:900}.check{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid #294563}.check:last-child{border:0}.check input{width:21px;height:21px;flex:none}.progress{height:9px;background:#081625;border-radius:99px;overflow:hidden;margin-top:8px}.bar{height:100%;background:#70e1b2;width:0}.progtext{font-size:12px;color:#a9bbd1;margin-top:6px}.tabs{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(650px,100%);display:grid;grid-template-columns:repeat(5,1fr);background:#06101df5;border-top:1px solid #294563;padding:6px 4px calc(6px + env(safe-area-inset-bottom));z-index:999}.tabs button{background:none;border:0;color:#a9bbd1;min-height:58px;font-weight:900;font-size:10px}.tabs button.active{color:#fff}.tabs span{display:block;font-size:20px}.kv{display:grid;grid-template-columns:100px 1fr;gap:8px;padding:8px 0;border-bottom:1px solid #294563}.k{color:#a9bbd1;font-size:12px}.v{font-size:13px;font-weight:800}details{background:#102039;border:1px solid #294563;border-radius:14px;padding:12px;margin:8px 0}summary{font-weight:900}.jp{font-size:18px;font-weight:850;line-height:1.6}textarea,input[type=text]{width:100%;background:#081625;color:#fff;border:1px solid #294563;border-radius:12px;padding:11px;font:inherit}.addrow{display:grid;grid-template-columns:1fr 72px;gap:7px}.del{margin-left:auto;background:#24364b;color:#b9c8da;border:0;border-radius:8px;padding:5px 8px}.sectiontabs{display:grid;grid-template-columns:1fr 1fr;gap:8px}.sectiontabs button{border:1px solid #294563;border-radius:12px;padding:10px;background:#102039;color:#fff;font-weight:900}.warn{border-left:4px solid #ffd166}
 
@@ -568,7 +569,37 @@ button,a,input,textarea,summary{
   padding:0;
 }
 
+
+/* ===== iPhone Safe Area / Status Bar Fix ===== */
+:root{color-scheme:dark;background:#071522;}
+html{min-height:100%;background:#071522 !important;}
+body{
+  min-height:100vh;
+  min-height:100dvh;
+  margin:0;
+  background:#071522 !important;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-left:env(safe-area-inset-left,0px);
+  padding-right:env(safe-area-inset-right,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+body::before{
+  content:"";
+  position:fixed;
+  top:0;left:0;right:0;
+  height:max(env(safe-area-inset-top,0px),1px);
+  background:#071522;
+  z-index:9999;
+  pointer-events:none;
+}
+
 </style><link rel="preconnect" href="https://api.open-meteo.com">
+
+<meta name="theme-color" content="#071522">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="九州旅行">
+
 </head><body>
 <!-- build: structural-clean-external-js-20260818 -->
 <!-- APP RULE STRICT:
@@ -851,7 +882,14 @@ button,a,input,textarea,summary{
 </details>
 </section>
 <section class="page" id="progress"><div class="title">已完成行程 ✅</div><div class="card"><div class="big">整趟旅行進度</div><div class="progress"><div class="bar" id="tripBar"></div></div><div class="progtext" id="tripText"></div></div><div class="card" id="tripChecks">
-<div class="check"><input data-k="d1" type="checkbox"/><label>DAY 1｜抵達福岡＋博多市區</label></div><div class="check"><input data-k="d2" type="checkbox"/><label>DAY 2｜豪斯登堡＋煙火</label></div><div class="check"><input data-k="d3a" type="checkbox"/><label>DAY 3｜舞鶴公園／福岡城跡</label></div><div class="check"><input data-k="d3b" type="checkbox"/><label>DAY 3｜太宰府</label></div><div class="check"><input data-k="d4" type="checkbox"/><label>DAY 4｜由布院</label></div><div class="check"><input data-k="d5a" type="checkbox"/><label>DAY 5｜糸島夫婦岩＋夕陽</label></div><div class="check"><input data-k="d5b" type="checkbox"/><label>DAY 5｜櫻井二見浦／夫婦岩</label></div><div class="check"><input data-k="d6" type="checkbox"/><label>DAY 6｜彈性行程</label></div><div class="check"><input data-k="d7" type="checkbox"/><label>DAY 7｜返台</label></div></div></section>
+<div class="check"><input data-k="d1" type="checkbox"/><label>DAY 1｜抵達福岡</label></div>
+<div class="check"><input data-k="d2" type="checkbox"/><label>DAY 2｜豪斯登堡</label></div>
+<div class="check"><input data-k="d3" type="checkbox"/><label>DAY 3｜福岡賞櫻＋天神</label></div>
+<div class="check"><input data-k="d4" type="checkbox"/><label>DAY 4｜由布院</label></div>
+<div class="check"><input data-k="d5" type="checkbox"/><label>DAY 5｜糸島</label></div>
+<div class="check"><input data-k="d6" type="checkbox"/><label>DAY 6｜太宰府＋中洲</label></div>
+<div class="check"><input data-k="d7" type="checkbox"/><label>DAY 7｜博多最後散步＋回台</label></div>
+</div></section>
 <section class="page" id="lists">
 <div class="title">清單 🧳</div>
 <div class="small">行前準備，一切更順利！</div>

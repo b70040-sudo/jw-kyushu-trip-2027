@@ -502,7 +502,52 @@ body.offline .offline-only-note{display:block}
   .tabs button span{font-size:19px !important}
 }
 
-</style></head><body>
+
+/* ===== Performance Optimization ===== */
+html{
+  scroll-behavior:auto;
+  -webkit-text-size-adjust:100%;
+}
+body{
+  overscroll-behavior-y:none;
+  -webkit-overflow-scrolling:touch;
+  touch-action:manipulation;
+}
+.page{
+  contain:layout style paint;
+  content-visibility:auto;
+  contain-intrinsic-size:800px;
+}
+.page.active{
+  content-visibility:visible;
+}
+.card,.day-accordion,.route-image-card,.daily-photo-card,.reco-accordion{
+  contain:layout paint;
+}
+img{
+  content-visibility:auto;
+  contain-intrinsic-size:360px 203px;
+  backface-visibility:hidden;
+  transform:translateZ(0);
+}
+button,a,input,textarea,summary{
+  touch-action:manipulation;
+}
+.tabs{
+  will-change:auto !important;
+  transform:translateZ(0);
+}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+    scroll-behavior:auto !important;
+  }
+}
+
+</style><link rel="preconnect" href="https://api.open-meteo.com">
+</head><body>
 <!-- build: structural-clean-external-js-20260818 -->
 <!-- APP RULE STRICT:
 想買、想吃、旅行備忘唯一完整內容固定於 #wishlist 收藏頁。
@@ -510,7 +555,7 @@ body.offline .offline-only-note{display:block}
 底部導覽固定六等分：今日、行程、完成、清單、更多、收藏。
 -->
 
-<div class="app"><div class="label">JW · KYUSHU 2027</div><h1>九州旅行🇯🇵</h1><div class="sub">2027/3/25～3/31｜7天6夜｜博多連住</div>
+<div class="app"><div class="label">JW · KYUSHU 2027</div><h1>九州旅行🇯🇵</h1><div class="sub">2027/3/25～3/31｜7天6夜｜住宿：靜鐵 Hotel Prezio 博多站前 / 福岡市博多區博多站前 4-17-6</div>
 <section class="page active" id="today">
 <div class="card weather-home">
 <div class="weather-main">
@@ -563,7 +608,7 @@ body.offline .offline-only-note{display:block}
 <div class="route-image-card">
 <b>🗺️ 全行程路線指南</b>
 <div class="caption">全行程總覽固定展開；每日細節則可收合。</div>
-<img alt="九州全行程總覽" onclick="openRouteImage(this.src)" src="./all_days_route_overview.png"/>
+<img alt="九州全行程總覽" onclick="openRouteImage(this.src)" src="./all_days_route_overview.png"/ loading="lazy" decoding="async">
 </div>
 <details class="day-accordion" data-day="1">
 <summary class="day-accordion-summary">
@@ -585,13 +630,13 @@ body.offline .offline-only-note{display:block}
 <div class="step"><div class="num">4</div><div><b>回飯店休息</b><div class="small">保留體力給 Day 2 豪斯登堡。</div></div></div>
 </div>
 <div class="daily-photo-card">
-<img alt="抵達福岡" onclick="openRouteImage(this.src)" src="./day1_photo_16x9.jpg"/>
+<img alt="抵達福岡" onclick="openRouteImage(this.src)" src="./day1_photo_16x9.jpg"/ loading="lazy" decoding="async">
 <div class="photo-caption">抵達福岡｜點圖片可放大</div>
 </div>
 <div class="route-image-card">
 <b>🗺️ Day 1 地理位置／動線圖</b>
 <div class="caption">依目前行程整理的示意動線；正式 JR／巴士班次之後再更新。</div>
-<img alt="Day 1 路線圖" onclick="openRouteImage(this.src)" src="./day1_route_16x9.png"/>
+<img alt="Day 1 路線圖" onclick="openRouteImage(this.src)" src="./day1_route_16x9.png"/ loading="lazy" decoding="async">
 </div>
 </div>
 </details>
@@ -616,13 +661,13 @@ body.offline .offline-only-note{display:block}
 <div class="step"><div class="num">5</div><div><b>JR 回博多</b><div class="small">正式車次公布後再補最終回程班次。</div></div></div>
 </div>
 <div class="daily-photo-card">
-<img alt="豪斯登堡" onclick="openRouteImage(this.src)" src="./day2_photo_16x9.jpg"/>
+<img alt="豪斯登堡" onclick="openRouteImage(this.src)" src="./day2_photo_16x9.jpg"/ loading="lazy" decoding="async">
 <div class="photo-caption">豪斯登堡｜點圖片可放大</div>
 </div>
 <div class="route-image-card">
 <b>🗺️ Day 2 地理位置／動線圖</b>
 <div class="caption">依目前行程整理的示意動線；正式 JR／巴士班次之後再更新。</div>
-<img alt="Day 2 路線圖" onclick="openRouteImage(this.src)" src="./day2_route_16x9.png"/>
+<img alt="Day 2 路線圖" onclick="openRouteImage(this.src)" src="./day2_route_16x9.png"/ loading="lazy" decoding="async">
 </div>
 </div>
 </details>
@@ -647,13 +692,13 @@ body.offline .offline-only-note{display:block}
 <div class="step"><div class="num">5</div><div><b>天神晚餐</b><div class="small">晚餐後回博多休息。</div></div></div>
 </div>
 <div class="daily-photo-card">
-<img alt="福岡賞櫻＋天神" onclick="openRouteImage(this.src)" src="./day3_photo_16x9.jpg"/>
+<img alt="福岡賞櫻＋天神" onclick="openRouteImage(this.src)" src="./day3_photo_16x9.jpg"/ loading="lazy" decoding="async">
 <div class="photo-caption">福岡賞櫻＋天神｜點圖片可放大</div>
 </div>
 <div class="route-image-card">
 <b>🗺️ Day 3 地理位置／動線圖</b>
 <div class="caption">依目前行程整理的示意動線；正式 JR／巴士班次之後再更新。</div>
-<img alt="Day 3 路線圖" onclick="openRouteImage(this.src)" src="./day3_route_16x9.png"/>
+<img alt="Day 3 路線圖" onclick="openRouteImage(this.src)" src="./day3_route_16x9.png"/ loading="lazy" decoding="async">
 </div>
 </div>
 </details>
@@ -677,13 +722,13 @@ body.offline .offline-only-note{display:block}
 <div class="step"><div class="num">4</div><div><b>傍晚回博多</b><div class="small">回程車次正式公布後更新。</div></div></div>
 </div>
 <div class="daily-photo-card">
-<img alt="由布院" onclick="openRouteImage(this.src)" src="./day4_photo_16x9.jpg"/>
+<img alt="由布院" onclick="openRouteImage(this.src)" src="./day4_photo_16x9.jpg"/ loading="lazy" decoding="async">
 <div class="photo-caption">由布院｜點圖片可放大</div>
 </div>
 <div class="route-image-card">
 <b>🗺️ Day 4 地理位置／動線圖</b>
 <div class="caption">依目前行程整理的示意動線；正式 JR／巴士班次之後再更新。</div>
-<img alt="Day 4 路線圖" onclick="openRouteImage(this.src)" src="./day4_route_16x9.png"/>
+<img alt="Day 4 路線圖" onclick="openRouteImage(this.src)" src="./day4_route_16x9.png"/ loading="lazy" decoding="async">
 </div>
 </div>
 </details>
@@ -708,13 +753,13 @@ body.offline .offline-only-note{display:block}
 <div class="step"><div class="num">5</div><div><b>傍晚回福岡</b><div class="small">務必預留回程交通時間。</div></div></div>
 </div>
 <div class="daily-photo-card">
-<img alt="糸島" onclick="openRouteImage(this.src)" src="./day5_photo_16x9.jpg"/>
+<img alt="糸島" onclick="openRouteImage(this.src)" src="./day5_photo_16x9.jpg"/ loading="lazy" decoding="async">
 <div class="photo-caption">糸島｜點圖片可放大</div>
 </div>
 <div class="route-image-card">
 <b>🗺️ Day 5 地理位置／動線圖</b>
 <div class="caption">依目前行程整理的示意動線；正式 JR／巴士班次之後再更新。</div>
-<img alt="Day 5 路線圖" onclick="openRouteImage(this.src)" src="./day5_route_16x9.png"/>
+<img alt="Day 5 路線圖" onclick="openRouteImage(this.src)" src="./day5_route_16x9.png"/ loading="lazy" decoding="async">
 </div>
 </div>
 </details>
@@ -738,13 +783,13 @@ body.offline .offline-only-note{display:block}
 <div class="step"><div class="num">4</div><div><b>中洲屋台</b><div class="small">晚上再出發，體驗福岡夜間屋台。</div></div></div>
 </div>
 <div class="daily-photo-card">
-<img alt="太宰府＋中洲" onclick="openRouteImage(this.src)" src="./day6_photo_16x9.jpg"/>
+<img alt="太宰府＋中洲" onclick="openRouteImage(this.src)" src="./day6_photo_16x9.jpg"/ loading="lazy" decoding="async">
 <div class="photo-caption">太宰府＋中洲｜點圖片可放大</div>
 </div>
 <div class="route-image-card">
 <b>🗺️ Day 6 地理位置／動線圖</b>
 <div class="caption">依目前行程整理的示意動線；正式 JR／巴士班次之後再更新。</div>
-<img alt="Day 6 路線圖" onclick="openRouteImage(this.src)" src="./day6_route_16x9.png"/>
+<img alt="Day 6 路線圖" onclick="openRouteImage(this.src)" src="./day6_route_16x9.png"/ loading="lazy" decoding="async">
 </div>
 </div>
 </details>
@@ -768,13 +813,13 @@ body.offline .offline-only-note{display:block}
 <div class="step"><div class="num">4</div><div><b>前往福岡機場</b><div class="small">預留充足時間辦理報到與退稅／行李。</div></div></div>
 </div>
 <div class="daily-photo-card">
-<img alt="博多最後散步＋回台" onclick="openRouteImage(this.src)" src="./day7_photo_16x9.jpg"/>
+<img alt="博多最後散步＋回台" onclick="openRouteImage(this.src)" src="./day7_photo_16x9.jpg"/ loading="lazy" decoding="async">
 <div class="photo-caption">博多最後散步＋回台｜點圖片可放大</div>
 </div>
 <div class="route-image-card">
 <b>🗺️ Day 7 地理位置／動線圖</b>
 <div class="caption">依目前行程整理的示意動線；正式 JR／巴士班次之後再更新。</div>
-<img alt="Day 7 路線圖" onclick="openRouteImage(this.src)" src="./day7_route_16x9.png"/>
+<img alt="Day 7 路線圖" onclick="openRouteImage(this.src)" src="./day7_route_16x9.png"/ loading="lazy" decoding="async">
 </div>
 </div>
 </details>
@@ -1165,7 +1210,7 @@ body.offline .offline-only-note{display:block}
 
 <div class="image-modal" id="routeImageModal" onclick="if(event.target.id==='routeImageModal')forceCloseRouteImage()">
 <button class="close" onclick="forceCloseRouteImage()">×</button>
-<img alt="詳細路線圖" id="routeImageModalImg">
+<img alt="詳細路線圖" id="routeImageModalImg" loading="lazy" decoding="async">
 </img></div>
 <section class="page" id="japanese">
 <div class="title">日文求助 🇯🇵</div>

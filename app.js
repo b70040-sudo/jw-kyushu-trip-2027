@@ -1,3 +1,18 @@
+
+/* ===== Runtime performance helpers ===== */
+const JWPerf = (() => {
+  let raf = 0;
+  const frame = (fn) => {
+    cancelAnimationFrame(raf);
+    raf = requestAnimationFrame(fn);
+  };
+  const idle = (fn) => {
+    if ('requestIdleCallback' in window) requestIdleCallback(fn, {timeout:1200});
+    else setTimeout(fn, 80);
+  };
+  return {frame, idle};
+})();
+
 function show(id){document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('active'));document.getElementById(id).classList.add('active');let b=document.querySelector('[data-p="'+id+'"]');if(b)b.classList.add('active');scrollTo(0,0)}document.querySelector('.tabs').onclick=e=>{let b=e.target.closest('button[data-p]');if(b)show(b.dataset.p)};
 const dep=new Date('2027-03-25T15:30:00+08:00');function tick(){let x=dep-new Date(),e=document.getElementById('count');if(x<=0){e.textContent='🇯🇵 九州旅行開始！';return}let d=Math.floor(x/86400000);x%=86400000;let h=Math.floor(x/3600000);x%=3600000;let m=Math.floor(x/60000);e.textContent=d+' 天 '+h+' 小時 '+m+' 分'}tick();setInterval(tick,60000);
 document.querySelectorAll('#depart input,#return input,#tripChecks input').forEach(c=>{let k='jw3_'+c.dataset.k;c.checked=localStorage.getItem(k)==='1';c.onchange=()=>{localStorage.setItem(k,c.checked?'1':'0');progress();updateTravelChecklists()}});
@@ -321,5 +336,5 @@ async function loadFukuokaWeather(){
   const t=document.getElementById('umbrellaTitle'); if(t)t.textContent='🌂 建議先帶折疊傘備用';
  }
 }
-document.addEventListener('DOMContentLoaded',loadFukuokaWeather);
-addEventListener('online',loadFukuokaWeather);
+document.addEventListener('DOMContentLoaded',()=>JWPerf.idle(loadFukuokaWeather));
+addEventListener('online',()=>JWPerf.idle(loadFukuokaWeather),{passive:true});

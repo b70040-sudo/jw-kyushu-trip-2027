@@ -1,0 +1,25 @@
+JW 九州旅行 APP｜順暢度優化版
+
+本次優化：
+1. 圖片 lazy loading：16/16
+2. 圖片 async decoding
+3. 非目前頁面使用 content-visibility，降低一次性渲染負擔
+4. 卡片與圖片區塊加入 CSS containment
+5. 觸控按鈕改用 touch-action: manipulation，降低手機點擊延遲
+6. 非必要天氣更新延後至瀏覽器空閒時處理
+7. 捲動跳轉改由 requestAnimationFrame 排程
+8. Open-Meteo 加入 preconnect
+9. PWA Service Worker 更新 cache key
+10. 圖片加入較長瀏覽器快取；HTML/JS 保持可快速更新
+
+功能內容未刪除：
+- 今日
+- 行程
+- 完成
+- 清單
+- 收藏
+- 更多
+- 天氣
+- 日文求助
+- Day 1~7 圖片與路線圖
+- 離線/PWA

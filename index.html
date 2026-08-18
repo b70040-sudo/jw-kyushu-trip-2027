@@ -535,7 +535,7 @@ button,a,input,textarea,summary{
 }
 .tabs{
   will-change:auto !important;
-  transform:translateZ(0);
+  transform:translateX(-50%) translateZ(0) !important;
 }
 @media (prefers-reduced-motion: reduce){
   *,*::before,*::after{
@@ -544,6 +544,28 @@ button,a,input,textarea,summary{
     transition-duration:.01ms !important;
     scroll-behavior:auto !important;
   }
+}
+
+
+/* ===== iPhone bottom navigation position fix ===== */
+.tabs{
+  left:50% !important;
+  right:auto !important;
+  transform:translateX(-50%) translateZ(0) !important;
+  width:min(650px,100vw) !important;
+  max-width:650px !important;
+  overflow:visible !important;
+}
+
+.trip-meta{
+  margin-top:6px;
+  text-align:left;
+  line-height:1.65;
+}
+.trip-meta>div{
+  display:block;
+  margin:0;
+  padding:0;
 }
 
 </style><link rel="preconnect" href="https://api.open-meteo.com">
@@ -555,7 +577,11 @@ button,a,input,textarea,summary{
 底部導覽固定六等分：今日、行程、完成、清單、更多、收藏。
 -->
 
-<div class="app"><div class="label">JW · KYUSHU 2027</div><h1>九州旅行🇯🇵</h1><div class="sub">2027/3/25～3/31｜7天6夜｜住宿：靜鐵 Hotel Prezio 博多站前 / 福岡市博多區博多站前 4-17-6</div>
+<div class="app"><div class="label">JW · KYUSHU 2027</div><h1>九州旅行🇯🇵</h1><div class="sub trip-meta">
+  <div>2027/3/25～3/31｜7天6夜</div>
+  <div>住宿：靜鐵 Hotel Prezio 博多站前</div>
+  <div>飯店位置：福岡市博多區博多站前 4-17-6</div>
+</div>
 <section class="page active" id="today">
 <div class="card weather-home">
 <div class="weather-main">
